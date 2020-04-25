@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1587707314 "proposal.tex" "proposal.pdf" "proposal" 1587707315
+["pdflatex"] 1587761273 "proposal.tex" "proposal.pdf" "proposal" 1587779912
   "../nips_style/neurips_2020.sty" 1587399310 11308 33fa6948195904410daa8773ea6feb42 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -70,11 +70,11 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "proposal.aux" 1587707315 767 6dab1f979aeddd34fbff60741302091e "pdflatex"
-  "proposal.out" 1587707315 43 8381271b25c00d64cade3e90f7cf386b "pdflatex"
-  "proposal.tex" 1587707314 4545 8a2c1f0d19d7a71c859bfbe8ddc59b15 ""
+  "proposal.aux" 1587761274 767 6dab1f979aeddd34fbff60741302091e "pdflatex"
+  "proposal.out" 1587761274 43 8381271b25c00d64cade3e90f7cf386b "pdflatex"
+  "proposal.tex" 1587761266 4770 e5834998ff373c25766511b7e089c940 ""
   (generated)
-  "proposal.out"
   "proposal.log"
-  "proposal.pdf"
   "proposal.aux"
+  "proposal.out"
+  "proposal.pdf"
