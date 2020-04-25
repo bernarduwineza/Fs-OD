@@ -25,7 +25,7 @@
 %     \usepackage[final]{neurips_2020}
 
 % to avoid loading the natbib package, add option nonatbib:
-     \usepackage[preprint]{./../nips_style/neurips_2020}
+     \usepackage[preprint,nonatbib]{./../nips_style/neurips_2020}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -78,37 +78,28 @@ Comparison of Fine-tuning and Meta-learning Approaches}
 
 \maketitle
 
-\begin{abstract} % TO BE REMOVED 
-  The abstract paragraph should be indented \nicefrac{1}{2}~inch (3~picas) on
-  both the left- and right-hand margins. Use 10~point type, with a vertical
-  spacing (leading) of 11~points.  The word \textbf{Abstract} must be centered,
-  bold, and in point size 12. Two line spaces precede the abstract. The abstract
-  must be limited to one paragraph.
-\end{abstract}
 
-\section{Proposal}
+\section{Problem Statement}
+A small child visiting a zoo with parents for the first time recognizes a strange animal---a zebra, she is told. She keeps walking and a few minutes later, by the infirmary, she recognizes another animal, only smaller and wobbly this time. ``A baby zebra'', she exclaims. From just this one example, she will be able to recognize just about every zebra she will ever see. Not only this, she will also be able to make remarkable connections to other animal that are are similar to zebras \cite{samuelson2005they}. 
 
-A small child visiting a zoo with parents for the first time recognizes a strange animal---a zebra,
-she is told. She keeps walking and a few minutes later, by the infirmary, she recognizes another animal, 
-only smaller and wobbly this time. ``A baby zebra'', she exclaims. From just this one example,
-she will be able to recognize just about every zebra she will ever see. Not only this, 
-she will also be able to make remarkable connections to other animal that are are similar to zebras. 
-This is an ability machines have yet to acquire. Although machines have surpassed humans in visually 
-recognizing objects, they still lack the ability to do so from a few examples. Recently,
-there have been promising advances towards the goal of making machines generalize from a few
-examples via a deep learning method called \textit{few-shot learning}. 
+This is an ability machines have yet to acquire. Although machines have surpassed humans in visually recognizing objects, they still lack the ability to do so from a few examples. Recently,there have been promising advances towards the goal of making machines generalize from a few examples via a deep learning method called \textit{few-shot learning}. 
 There are many important applications that could benefit from the ability to learn from a few 
 samples. Like any other problem, there are various approaches to this this task.
 In this project, we propose to evaluate and analyze two of the most promising approaches. 
 
-Few-shot learning have received significant interest in the past few years, 
+Few-shot learning has received significant interest in the past few years, 
 but mainly for the tasks of classification and rarely for object detection. 
-In deep computer vision, the task of object detection is a more challenging one. 
-Not only does the detector have to perform recognition of the different kinds of objects present,
-it also has to locate their exact locations. This is already a challenging task that relies heavily 
-on the availability of massive amounts of labeled training data. When given base classes with 
-sufficient examples and novel classes with few examples, few-shot learning attempts to find
-a model that will be able to correctly detect both base and novel objects at test time. 
+In computer vision, the task of object detection is more challenging since the detector not only has to perform recognition of the different kinds of objects present,
+it also has to localize them. This is already a challenging task that relies heavily 
+on the availability of massive amounts of labeled training data. Now when a new datapoint is obtained belonging to a novel category, adapting the model becomes a very difficult task especially when the new category contains a few samples. Recently, meta learning techniques have been proposed for adapting deep models to novel categories. However, they are not easily extendable to the task of object detection. Take for example the Matching \cite{VinyalsBLKW16} and Prototypical Networks \cite{snell2017prototypical}, building prototypes of objects is much more difficult than building prototype of the categories. Another approach that is being explored by researchers is to provide ways to fine-tune the detection layers of deep models to adapt to the new categories.
+
+In this project we aim to do a comparative study of meta-learning and fine-tuning approaches towards object detection. We aim to experiment on benchmark datasets such as COCO \cite{LinMBHPRDZ14} and PASCAL\cite{Everingham10} and also extend these approaches towards 3d object detection with the KITTI dataset \cite{Geiger2013IJRR}.
+
+\section{Contribution}
+All authors were involved in coming up with the project. Sayak and Bernard will focus on meta-learning based approaches, while Om, Chetan and Vikarn will work on fine-tuning approaches for object detection. 
+
+\bibliographystyle{IEEEtran}
+\bibliography{References}
 
 
 \end{document}
