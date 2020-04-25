@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex proposal"] 1587797845 "proposal.aux" "proposal.bbl" "proposal" 1587797848
+["bibtex proposal"] 1587798125 "proposal.aux" "proposal.bbl" "proposal" 1587798252
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "References.bib" 1587797831 2585 22f4d4ec201a79e00b01884c654238ed ""
-  "proposal.aux" 1587797846 1260 43bbd9295b357a601fcfc704ffc898e9 "pdflatex"
+  "proposal.aux" 1587798252 1260 43bbd9295b357a601fcfc704ffc898e9 "pdflatex"
   (generated)
-  "proposal.blg"
   "proposal.bbl"
-["pdflatex"] 1587797845 "proposal.tex" "proposal.pdf" "proposal" 1587797848
+  "proposal.blg"
+["pdflatex"] 1587798251 "proposal.tex" "proposal.pdf" "proposal" 1587798252
   "../nips_style/neurips_2020.sty" 1587399310 11308 33fa6948195904410daa8773ea6feb42 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -33,6 +33,7 @@
   "/usr/local/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf" 1136768653 2340 df9c920cc5688ebbf16a93f45ce7bdd3 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf" 1136768653 2348 91706c542228501c410c266421fbe30c ""
   "/usr/local/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf" 1136768653 2328 6cd7df782b09b29cfc4d93e55b6b9a59 ""
+  "/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1463608860 8237 3b62ef1f7e2c23a328c814b3893bc11f ""
   "/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty" 1536701967 185392 b99a6d53180e04300c35e18725f31231 ""
@@ -52,6 +53,9 @@
   "/usr/local/texlive/2019/texmf-dist/tex/latex/booktabs/booktabs.sty" 1462233275 5869 94335281ffcab47f341cf07ea8220e30 ""
   "/usr/local/texlive/2019/texmf-dist/tex/latex/environ/environ.sty" 1399239813 4378 f429f0da968c278653359293040a8f52 ""
   "/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty" 1525727744 41645 0653033a985e06c69a2a9cea9a95e31a ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def" 1515537368 17334 520b9b85ad8a2a48eda3f643e27a5179 ""
+  "/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/color.sty" 1523134385 7028 112f909feb676788e7ea1c5b0b76320f ""
   "/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty" 1523134385 2591 6404d0c7d28505fb38ce0d86c2e28ae7 ""
   "/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def" 1543704539 51744 477aad43ad6a7ba8c462d20c3e0808e0 ""
   "/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty" 1543704539 236074 d994150943d35d6af0d586a60cc78dd1 ""
@@ -76,12 +80,12 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "proposal.aux" 1587797846 1260 43bbd9295b357a601fcfc704ffc898e9 "pdflatex"
-  "proposal.bbl" 1587797845 2401 079b70763e590aa8c6f58292f558109a "bibtex proposal"
-  "proposal.out" 1587797846 99 f7f06c598d05fb33f9414a3e500584f2 "pdflatex"
-  "proposal.tex" 1587797843 5496 fa647e909365f6c155ba9e019e947f5e ""
+  "proposal.aux" 1587798252 1260 43bbd9295b357a601fcfc704ffc898e9 "pdflatex"
+  "proposal.bbl" 1587798125 2401 079b70763e590aa8c6f58292f558109a "bibtex proposal"
+  "proposal.out" 1587798252 99 f7f06c598d05fb33f9414a3e500584f2 "pdflatex"
+  "proposal.tex" 1587798251 5618 743a9e91a958c026a62debecb0efd107 ""
   (generated)
-  "proposal.pdf"
-  "proposal.log"
   "proposal.aux"
+  "proposal.log"
   "proposal.out"
+  "proposal.pdf"
