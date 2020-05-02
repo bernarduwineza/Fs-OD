@@ -34,7 +34,7 @@
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
-    urlcolor=green,
+    urlcolor=cyan,
 }
 
 \usepackage{url}
@@ -73,7 +73,7 @@ Comparison of Fine-tuning and Meta-learning Approaches}
   Sayak Nag \\
   University of California,Riverside \\
   Riverside, CA 92501 \\
-  \texttt{snag005@uvr.edu} \\
+  \texttt{snag005@ucr.edu} \\
   %
   \And
   Vikarn Bhakri \\
@@ -88,23 +88,75 @@ Comparison of Fine-tuning and Meta-learning Approaches}
 
 
 \section{Problem Statement}
-A small child visiting a zoo with parents for the first time recognizes a strange animal---a zebra, she is told. She keeps walking and a few minutes later, by the infirmary, she recognizes another animal, only smaller and wobbly this time. ``A baby zebra'', she exclaims. From just this one example, she will be able to recognize just about every zebra she will ever see. Not only this, she will also be able to make remarkable connections to other animal that are are similar to zebras \cite{samuelson2005they}. 
+A small child visiting a zoo with parents for the first time recognizes a strange animal---a zebra, 
+she is told. She keeps walking and a few minutes later, by the infirmary, she recognizes another animal,
+only smaller and wobbly this time. ``A baby zebra'', she exclaims. From just this one example, 
+she will be able to recognize just about every zebra she will ever see. Not only this, 
+she will also be able to make remarkable connections to other animal that are are similar 
+to zebras \cite{samuelson2005they}. 
 
-This is an ability machines have yet to acquire. Although machines have surpassed humans in visually recognizing objects, they still lack the ability to do so from a few examples. Recently,there have been promising advances towards the goal of making machines generalize from a few examples via a deep learning method called \textit{few-shot learning}. 
+This is an ability machines have yet to acquire. Although machines have surpassed humans in 
+visually recognizing objects, they still lack the ability to do so from a few examples. 
+Recently,there have been promising advances towards the goal of making machines generalize 
+from a few examples via a deep learning method called \textit{few-shot learning}. 
 There are many important applications that could benefit from the ability to learn from a few 
 samples. Like any other problem, there are various approaches to this this task.
 In this project, we propose to evaluate and analyze two of the most promising approaches. 
 
 Few-shot learning has received significant interest in the past few years, 
 but mainly for the tasks of classification and rarely for object detection. 
-In computer vision, the task of object detection is more challenging since the detector not only has to perform recognition of the different kinds of objects present,
+In computer vision, the task of object detection is more challenging since the detector 
+not only has to perform recognition of the different kinds of objects present,
 it also has to localize them. This is already a challenging task that relies heavily 
-on the availability of massive amounts of labeled training data. Now when a new datapoint is obtained belonging to a novel category, adapting the model becomes a very difficult task especially when the new category contains a few samples. Recently, meta learning techniques have been proposed for adapting deep models to novel categories. However, they are not easily extendable to the task of object detection. Take for example the Matching \cite{VinyalsBLKW16} and Prototypical Networks \cite{snell2017prototypical}, building prototypes of objects is much more difficult than building prototype of the categories. Another approach that is being explored by researchers is to provide ways to fine-tune the detection layers of deep models to adapt to the new categories.
+on the availability of massive amounts of labeled training data. Now when a new data-point 
+is obtained belonging to a novel category, adapting the model becomes a very difficult 
+task especially when the new category contains a few samples. Recently, meta learning techniques 
+have been proposed for adapting deep models to novel categories. However, they are not easily 
+extendable to the task of object detection. Take for example the Matching \cite{VinyalsBLKW16} 
+and Prototypical Networks \cite{snell2017prototypical}, building prototypes of objects is 
+much more difficult than building prototype of the categories. Another approach that is being 
+explored by researchers is to provide ways to fine-tune the detection layers of 
+deep models to adapt to the new categories \cite{wang2020frustratingly}.
 
-In this project we aim to do a comparative study of meta-learning and fine-tuning approaches towards object detection. We aim to experiment on benchmark datasets such as COCO \cite{LinMBHPRDZ14} and PASCAL\cite{Everingham10} and also extend these approaches towards 3d object detection with the KITTI dataset \cite{Geiger2013IJRR}.
+In this project we aim to do a comparative study of meta-learning and fine-tuning approaches 
+towards object detection. We aim to experiment on benchmark datasets such as 
+COCO \cite{LinMBHPRDZ14} and PASCAL \cite{Everingham10} and also extend these approaches 
+towards 3D object detection with the KITTI dataset \cite{Geiger2013IJRR}.
 
-\section{Contribution}
-All authors were involved in coming up with the project. Sayak and Bernard will focus on meta-learning based approaches, while Om, Chetan and Vikarn will work on fine-tuning approaches for object detection. 
+In addition, we plan on examining how many shots are necessary to reach comparable accuracy relative to 
+conventional detection approaches. To this end, we will attempt to develop a metric that assesses
+the model's knowledge, and requests additional labeled examples if it has not reached a certain accuracy. This will allow us to further compare the performance of the two approaches. 
+
+\section{Work Plan}
+
+We plan to work on the meta-learning and fine-tuning based approaches simultaneously. 
+Sayak and Bernard will focus on meta-learning-based approaches, while Om, Chetan and Vikarn will work 
+on fine-tuning approaches. The experimental results will be compiled by Om and Vikarn while Sayak, 
+Bernard and Chetan will work on final report compilation. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{References}

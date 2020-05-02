@@ -39,6 +39,13 @@ J.~Snell, K.~Swersky, and R.~Zemel, ``Prototypical networks for few-shot
   learning,'' in \emph{Advances in neural information processing systems},
   2017, pp. 4077--4087.
 
+\bibitem{wang2020frustratingly}
+\BIBentryALTinterwordspacing
+X.~Wang, T.~E. Huang, T.~Darrell, J.~E. Gonzalez, and F.~Yu, ``{Frustratingly
+  Simple Few-Shot Object Detection},'' \emph{arXiv preprint arXiv:2003.06957},
+  2020. [Online]. Available: \url{http://arxiv.org/abs/2003.06957}
+\BIBentrySTDinterwordspacing
+
 \bibitem{LinMBHPRDZ14}
 \BIBentryALTinterwordspacing
 T.~Lin, M.~Maire, S.~J. Belongie, L.~D. Bourdev, R.~B. Girshick, J.~Hays,
@@ -48,13 +55,13 @@ T.~Lin, M.~Maire, S.~J. Belongie, L.~D. Bourdev, R.~B. Girshick, J.~Hays,
 \BIBentrySTDinterwordspacing
 
 \bibitem{Everingham10}
-M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The
-  pascal visual object classes (voc) challenge,'' \emph{International Journal
-  of Computer Vision}, vol.~88, no.~2, pp. 303--338, Jun. 2010.
+M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman,
+  ``{The Pascal Visual Object Classes {(VOC)} Challenge},'' \emph{International
+  Journal of Computer Vision}, vol.~88, no.~2, pp. 303--338, Jun. 2010.
 
 \bibitem{Geiger2013IJRR}
-A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun, ``Vision meets robotics: The
-  kitti dataset,'' \emph{International Journal of Robotics Research (IJRR)},
+A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun, ``{Vision meets Robotics}: {The
+  KITTI Dataset},'' \emph{International Journal of Robotics Research (IJRR)},
   2013.
 
 \end{thebibliography}
