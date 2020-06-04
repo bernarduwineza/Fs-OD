@@ -1,0 +1,134 @@
+\usepackage{graphics}
+\usepackage{graphicx} % For including and formatting image files
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+
+\usepackage{amsmath, mathrsfs, dsfont}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+
+\usepackage{cite}
+\usepackage{verbatim}
+
+\usepackage{amscd}
+\usepackage{color}
+
+\usepackage{rotating}
+
+
+\usepackage[font=footnotesize]{caption}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage[font=footnotesize]{subcaption}
+
+%\usepackage{mathptmx}
+\usepackage[11pt]{moresize}
+\usepackage{flushend}
+\usepackage[stable]{footmisc}
+
+\usepackage{algorithmicx}
+\usepackage[ruled]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algpascal}
+\usepackage{algc}
+\usepackage{enumitem}
+
+%\usepackage{lipsum,multicol}
+
+\usepackage[vcentermath]{youngtab} % For typesetting Young Tableaux
+
+%---------
+\usepackage{arydshln}
+
+%-----------------------------------------%
+% Define custom symbols
+\newcommand{\BoldA}				{ \mathbf{A} }
+\newcommand{\Bolda}				{ \mathbf{a} }
+\newcommand{\BoldB}				{ \mathbf{B} }
+\newcommand{\Boldb}				{ \mathbf{b} }
+\newcommand{\BoldC}				{ \mathbf{C} }
+\newcommand{\Boldc}				{ \mathbf{c} }
+\newcommand{\BoldD}				{ \mathbf{D} }
+\newcommand{\BoldE}				{ \mathbf{E} }
+\newcommand{\Bolde}				{ \mathbf{e} }
+\newcommand{\BoldF}				{ \mathbf{F} }
+\newcommand{\BoldG}				{ \mathbf{G} }
+\newcommand{\g}					{ \mathbf{g} }
+\newcommand{\BoldH}				{ \mathbf{H} }
+\newcommand{\Boldh}				{ \mathbf{h} }
+\newcommand{\BoldI}				{ \mathbf{I} }
+\newcommand{\I}					{ \mathbf{I} }
+\newcommand{\BoldJ}				{ \mathbf{J} }
+\newcommand{\BoldK}				{ \mathbf{K} }
+\newcommand{\Boldk}				{ \mathbf{k} }
+\newcommand{\BoldM}				{ \mathbf{M} }
+\newcommand{\Boldm}				{ \mathbf{m} }
+\newcommand{\BoldN}				{ \mathbf{N} }
+\newcommand{\Boldn}				{ \mathbf{n} }
+\newcommand{\BoldO}				{ \mathbf{O} }
+\newcommand{\BoldP}				{ \mathbf{P} }
+\newcommand{\Boldp}				{ \mathbf{p} }
+\newcommand{\BoldQ}				{ \mathbf{Q} }
+\newcommand{\Boldq}				{ \mathbf{q} }
+\newcommand{\BoldR}				{ \mathbf{R} }
+\newcommand{\R}					{ \mathbf{R} }
+\newcommand{\Boldr}				{ \mathbf{r} }
+\newcommand{\BoldS}				{ \mathbf{S} }
+\newcommand{\BoldT}				{ \mathbf{T} }
+\newcommand{\BoldU}				{ \mathbf{U} }
+\newcommand{\Boldu}				{ \mathbf{u} }
+\newcommand{\BoldV}				{ \mathbf{V} }
+\newcommand{\Boldv}				{ \mathbf{v} }
+\newcommand{\BoldW}				{ \mathbf{W} }
+\newcommand{\BoldX}				{ \mathbf{X} }
+\newcommand{\Boldx}				{ \mathbf{x} }
+\newcommand{\BoldY}				{ \mathbf{Y} }
+\newcommand{\Boldy}				{ \mathbf{y} }
+\newcommand{\BoldZ}				{ \mathbf{Z} }
+\newcommand{\Boldz}				{ \mathbf{z} }
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\0}					{ \boldsymbol{0} }
+\newcommand{\1}					{ \boldsymbol{1} }
+
+\newcommand{\dtheta}			{ \delta\boldsymbol{\theta} }
+\newcommand{\noiseg}			{ \mathbf{n}_{g} }
+\newcommand{\noisewg}			{ \mathbf{n}_{{\omega}g} }
+\newcommand{\noisea}			{ \mathbf{n}_{a} }
+\newcommand{\noisewa}			{ \mathbf{n}_{{\omega}a} }
+\newcommand{\Boldomega}			{ \boldsymbol{\omega} }
+\newcommand{\Boldnu}			{ \boldsymbol{\nu} }
+\newcommand{\BoldGamma}			{ \boldsymbol{\Gamma} }
+\newcommand{\Boldgamma}			{ \boldsymbol{\gamma} }
+\newcommand{\Boldkappa}			{ \boldsymbol{\kappa} }
+\newcommand{\BoldPhi}			{ \boldsymbol{\Phi} }
+\newcommand{\Boldphi}			{ \boldsymbol{\phi} }
+\newcommand{\Boldpi}			{ \boldsymbol{\pi} }
+\newcommand{\Boldrho}			{ \boldsymbol{\rho} }
+\newcommand{\Boldell}			{ \boldsymbol{\ell} }
+%\newcommand{\0}					{ \boldsymbol{0} }
+\newcommand{\Bolddelta}			{ \boldsymbol{\delta} }
+\newcommand{\BoldTheta}			{ \boldsymbol{\Theta} }
+\newcommand{\Boldtheta}			{ \boldsymbol{\theta} }
+\newcommand{\BoldSigma}			{ \boldsymbol{\Sigma} }
+\newcommand{\Boldsigma}			{ \boldsymbol{\sigma} }
+\newcommand{\Boldeps}			{ \boldsymbol{\epsilon} }
+\newcommand{\Boldmu}			{ \boldsymbol{\mu} }
+\newcommand{\Boldeta}			{ \boldsymbol{\eta} }
+\newcommand{\Boldzeta}			{ \boldsymbol{\zeta} }
+\newcommand{\Boldlambda}		{ \boldsymbol{\lambda} }
+\newcommand{\BoldLambda}		{ \boldsymbol{\Lambda} }
+\newcommand{\Boldchi}			{ \boldsymbol{\chi} }
+
+\newcommand{\E}					{\mathrm{E}}
+\newcommand{\Var}				{\mathrm{Var}}
+\newcommand{\Cov}				{\mathrm{Cov}}
+\newcommand\norm[1]{\lVert#1\rVert}

@@ -25,7 +25,7 @@
 %     \usepackage[final]{neurips_2020}
 
 % to avoid loading the natbib package, add option nonatbib:
-     \usepackage[preprint,nonatbib]{./../nips_style/neurips_2020}
+     \usepackage[preprint, nonatbib]{./../nips_style/neurips_2020}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -44,6 +44,7 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 
+\input{./sym_def.tex}
 \title{Few Shot Object Detection Using Fine-tuning}
 
 \author{% Please fill in your info
@@ -104,6 +105,7 @@ Abstract goes here
 \end{itemize}
 
 \section{Introduction}
+{\color{magenta}
 \textbf{This text is from the proposal. It will be changed.} \\
 Few-shot learning has received significant interest in the past few years, 
 but mainly for the tasks of classification and rarely for object detection. 
@@ -120,6 +122,7 @@ much more difficult than building prototype of the categories. Another approach 
 explored by researchers is to provide ways to fine-tune the detection layers of 
 deep models to adapt to the new categories \cite{wang2020frustratingly}.
 
+
 In this project we aim to do a comparative study of meta-learning and fine-tuning approaches 
 towards object detection. We aim to experiment on benchmark datasets such as 
 COCO \cite{LinMBHPRDZ14} and PASCAL \cite{Everingham10} and also extend these approaches 
@@ -129,6 +132,98 @@ In addition, we plan on examining how many shots are necessary to reach comparab
 conventional detection approaches. To this end, we will attempt to develop a metric that assesses
 the model's knowledge, and requests additional labeled examples if it has not reached a certain accuracy. 
 This will allow us to further compare the performance of the two approaches. 
+} 
+
+\section{Few-shot Finetuning}
+
+\subsection{Problem Definition}
+Suppose there is  a set of base classes $C_b$ with \textit{sufficiently many} training examples and a set $C_n$ 
+of novel classes with only $K$ examples per class (in this paper $K \leq 10$ always). 
+The few-shot datasets used herein are balanced, meaning that for each novel class there are $K$ annotated examples.
+When $K$ examples are used in finetuning, we call it a $k$-shot detection. 
+Denote the set of training images as $\mathcal{X}$ and their corresponding labels as $\mathcal{Y}$. 
+A detection dataset $\mathcal{D} = \{ (x,y), ~ x \in \mathcal{X}, ~ y \in \mathcal{Y} \}$, where $x$ 
+is the input image and $y= \{(c_i, \bm 1_i) \}_{i=1}^N$ denotes the categories $c \in  C_b \cup C_n$ and 
+bounding box coordinates $\1 $ of the $N$ instances of the object in the image $x$. 
+
+In \cite{VinyalsBLKW16} and \cite{snell2017prototypical}, as is usually used in few-shot learning, 
+the authors use $N$-way $K$-shot regime for evaluation, where $N$ is the number of training examples, 
+and $K$ is the number of classes in the training set. 
+In this paper, the detector model is evaluated on a test set that includes base and novel classes
+to optimize the detection accuracy as measured by mean average precision (mAP) of both novel and base classes.
+
+\begin{figure}[h]
+  % \centering
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/fs_det/s1_finetuning.png}
+  % }
+  \subcaption{Stage I}
+  \label{stage-1-finetuning}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/fs_det/s2_finetuning.png}
+  % }
+  \subcaption{Stage II}
+  \label{stage-2-finetuning}
+  \end{minipage}
+  \caption{Stage I \& II of  the finetuning process. Figure courtesy of Wang et al. }
+  \label{finetuning}
+\end{figure}
+
+\subsection{Two-stage Finetuning}
+In a two-stage process, we adopt the simple finetuning approach of \cite{wang2020frustratingly}. 
+This approach builds on Faster R-CNN \cite{ren2015faster}, a popular two-stage object detector model. 
+The approach is pictures in Figure \ref{finetuning}.  
+Figure \ref{stage-1-finetuning} shows that the Faster R-CNN model has three main components, namely, 
+the backbone, the Region Proposal Network (RPN), and the two-layer fully-connected network as a 
+Region of Interest (RoI) feature extractor.  
+The backbone used in this paper is the ResNet architecture \cite{he2016deep}, but it could be any other 
+architecture such as the VGG16. The ResNet was chosen because it is relatively easier to optimize,
+hence potentially easier to adapt to novel classes. 
+In addition to Faster R-CNN model, henceforth denoted $\mathcal{F}$, the approach also uses a box 
+classifier $\mathcal{C}$ for classifying objects into different classes and a box regressor $\mathcal{R}$
+to predict the bounding boxes. 
+
+The main intuitive assumption is that $\mathcal{F}$ is able to transfer the features learned from base classes to 
+novel classes. In other words, $\mathcal{F}$ is class-agnostic. This leads to the main contribution of 
+\cite{wang2020frustratingly}: a suggestion that when introducing novel classes, it matters 
+little to retrain $\mathcal{F}$. Instead, only the the box classifier $\mathcal{C}$ and regressor $\mathcal{R}$
+need to be finetuned on the examples of novel classes since the features of base classes learned with $\mathcal{F}$ 
+will easily transfer to novel classes. In this way, feature representation learning and box 
+prediction learning are separated into two stages, as shown in Figure \ref{finetuning}.
+
+\textbf{Stage I: Base Training. } 
+The feature  extractor and the box predictor are trained on a dataset containing 
+base classes, $C_b$. The training loss function \cite{ren2015faster} is 
+\begin{equation}
+  L = L_{\mathcal{F}} + L_{\mathcal{C}} + L_{\mathcal{R}}. 
+  \label{loss_func}
+\end{equation}
+The $L_{\mathcal{F}}$ loss is obtained from the output of the RPN network, hence, it helps distinguishing 
+background from foreground. The $L_{\mathcal{C}}$ loss is a cross-entropy loss of the box classifier, and 
+$L_{\mathcal{R}}$ is the robust loss function (smoothed $L_1$) of the box regressor. More details on $L$ can be
+found in \cite{ren2015faster} and \cite{girshick2015fast}. 
+
+\textbf{Stage II: Finetuning. }
+In this stage, a small training set containing $K$ examples per class, with both base and novel classes. 
+Using a smaller learning rate\footnote{The finetuning learning rate is reduced by at least 20 times compared 
+to base training learning rate. In our experiments, it was reduced from $2\cdot10^{-2}$ to $1\cdot10^{-3}$.} 
+and the same loss function as in \eqref{loss_func}, the box classifier 
+and regressor are initialized with random weights for the novel classes and are finetuned 
+while the feature extractor $\mathcal{F}$ is fixed and unmodified. 
+
+
+\textbf{Euclidean distance-based Similarity. }
+The weight matrix $W \in \RR^{d \times c}$ of the box classifier $\mathcal{C}$ can be expressed as 
+  $W = [w_1, w_2, \dots, w_c]$ 
+where the row-vector  $w_c \in \RR^d$ is the weight vector of each class.  
+Recent works (such as \cite{chen2019closer,qi2018low,gidaris2018dynamic}) have proposed 
+box classifiers based on cosine similarity. 
+
+
 
 \section{Other Sections}
 
