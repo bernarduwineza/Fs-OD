@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex final_report"] 1591299315 "final_report.aux" "final_report.bbl" "final_report" 1591299919
+["bibtex final_report"] 1591320530 "final_report.aux" "final_report.bbl" "final_report" 1591331647
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "References.bib" 1591299247 5038 48672f73427dd15b1679e4641924bcad ""
-  "final_report.aux" 1591299919 3231 c9cebc456ac89238208ef41a3c5cdd2a "pdflatex"
+  "final_report.aux" 1591320532 3453 97adf3e71105ca299bcff41e2ffbf194 "pdflatex"
   (generated)
-  "final_report.bbl"
   "final_report.blg"
-["pdflatex"] 1591299918 "final_report.tex" "final_report.pdf" "final_report" 1591299919
+  "final_report.bbl"
+["pdflatex"] 1591320530 "final_report.tex" "final_report.pdf" "final_report" 1591331647
   "../../figures/fs_det/s1_finetuning.png" 1590882343 303043 4f250de6c5222122f3eadce00be42d57 ""
   "../../figures/fs_det/s2_finetuning.png" 1590882381 306100 aaafe10250b6eccb42d96ed87271d03b ""
   "../nips_style/neurips_2020.sty" 1587399310 11308 33fa6948195904410daa8773ea6feb42 ""
@@ -54,9 +54,13 @@
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1248133631 36094 798f80770b3b148ceedd006d487db67c ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
@@ -162,13 +166,13 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "final_report.aux" 1591299919 3231 c9cebc456ac89238208ef41a3c5cdd2a "pdflatex"
-  "final_report.bbl" 1591299316 3762 2e118d47c709ee9a169507199eb7f2da "bibtex final_report"
-  "final_report.out" 1591299919 454 744d344b3788b27f005b5d612b94c457 "pdflatex"
-  "final_report.tex" 1591299917 14156 dfb69cb47d1ef36915350b119542130b ""
+  "final_report.aux" 1591320532 3453 97adf3e71105ca299bcff41e2ffbf194 "pdflatex"
+  "final_report.bbl" 1591320530 3762 2e118d47c709ee9a169507199eb7f2da "bibtex final_report"
+  "final_report.out" 1591320532 538 1b928f5e893d2e9e936fb0da8e9d91cd "pdflatex"
+  "final_report.tex" 1591320528 15251 6de670b6e44226cae99a8d926f8a56d4 ""
   "sym_def.tex" 1591244300 4337 e6b0dd1d0ec4bc258bb6acacdc60cac6 ""
   (generated)
-  "final_report.pdf"
-  "final_report.log"
-  "final_report.out"
   "final_report.aux"
+  "final_report.log"
+  "final_report.pdf"
+  "final_report.out"

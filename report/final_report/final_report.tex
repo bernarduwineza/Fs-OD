@@ -1,5 +1,5 @@
 %==============================================================================
-% This is a document for writing the proposal for EE260 project. 
+% This is a document for writing the final report for EE260 project. 
 %
 % It uses the NeurIPS (formerly NIPS) style. When making changes, please refer 
 % to the style file and example given (../nips_style/neurips_2020.tex)
@@ -187,7 +187,7 @@ In addition to Faster R-CNN model, henceforth denoted $\mathcal{F}$, the approac
 classifier $\mathcal{C}$ for classifying objects into different classes and a box regressor $\mathcal{R}$
 to predict the bounding boxes. 
 
-The main intuitive assumption is that $\mathcal{F}$ is able to transfer the features learned from base classes to 
+The main intuitive assumption is that $\mathcal{F}$ is able to transfer the feature function $\mathcal{F}(x)$ learned from base classes to 
 novel classes. In other words, $\mathcal{F}$ is class-agnostic. This leads to the main contribution of 
 \cite{wang2020frustratingly}: a suggestion that when introducing novel classes, it matters 
 little to retrain $\mathcal{F}$. Instead, only the the box classifier $\mathcal{C}$ and regressor $\mathcal{R}$
@@ -216,13 +216,28 @@ and regressor are initialized with random weights for the novel classes and are 
 while the feature extractor $\mathcal{F}$ is fixed and unmodified. 
 
 
-\textbf{Euclidean distance-based Similarity. }
+\subsection{Euclidean Distance-based Similarity}
 The weight matrix $W \in \RR^{d \times c}$ of the box classifier $\mathcal{C}$ can be expressed as 
   $W = [w_1, w_2, \dots, w_c]$ 
 where the row-vector  $w_c \in \RR^d$ is the weight vector of each class.  
-Recent works (such as \cite{chen2019closer,qi2018low,gidaris2018dynamic}) have proposed 
-box classifiers based on cosine similarity. 
+Recent works (such as \cite{VinyalsBLKW16,chen2019closer,qi2018low,gidaris2018dynamic}) have proposed 
+box classifiers based on cosine similarity. The output of the classifier is a scaled similarity score matrix 
+of the input features and the weight vectors of the classes. Specifically
+\begin{equation}
+  s_{ij} = \frac{\alpha \mathcal{F}(x)_i^\top w_j}{\| \mathcal{F}(x)_i \| \|w_j\|},
+\end{equation}
+where $\alpha$ is the scaling factor\footnote{In \cite{wang2020frustratingly}, a fixed value 
+of $\alpha = 20$ was used.}. 
+Cosine similarity is attractive because it offers feature normalization which reduces the 
+variance between classes and improves detection accuracy for novel classes \cite{wang2020frustratingly}. 
 
+We now propose a different similarity score, in which the Euclidean distance between the 
+input features and class weight vectors are passed through the Softmax function. Specifically
+\begin{equation}
+  s_{ij} = \frac{e^{-\|\mathcal{F}(x)_i - w_j\|_2^2}}{\sum_{j} e^{-\|\mathcal{F}(x)_i - w_j\|_2^2}}.
+\end{equation}
+This similarity score provides a stronger kind of feature normalization which should help the model 
+adapt to novel classes when introducing novel classes. 
 
 
 \section{Other Sections}
