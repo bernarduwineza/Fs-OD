@@ -25,7 +25,7 @@
 %     \usepackage[final]{neurips_2020}
 
 % to avoid loading the natbib package, add option nonatbib:
-     \usepackage[preprint, nonatbib]{./../nips_style/neurips_2020}
+     \usepackage[final, nonatbib]{./../nips_style/neurips_2020}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -92,7 +92,7 @@ Abstract goes here
 
 \end{abstract}
 
-\subsection{Some rules for collaboration}
+\subsection{Some rules for collaboration} % TO BE REMOVED BEFORE SUBMISSION 
 
 \begin{itemize}
   \item DO NOT delete text you did not write, unless the person who wrote it asks you. 
@@ -134,6 +134,59 @@ the model's knowledge, and requests additional labeled examples if it has not re
 This will allow us to further compare the performance of the two approaches. 
 } 
 
+\section{Existing Approaches}
+\subsection{General Detectors}
+
+There are many approaches to the general object detection problem. The most prominent and successful ones use
+deep convolutional neural networks (Deep CNNs). A series of related detectors in
+\cite{girshick2014rich,girshick2015fast,ren2015faster} began with R-CNN, a network which uses pre-trained CNNs 
+to classify region proposals \cite{girshick2014rich}. The proposals are generated using  a method of 
+selective search introduced in \cite{uijlings2013selective}. Fast R-CNN \cite{girshick2015fast} added a
+region-of-interest (RoI) pooling layer to extract regional features directly from convolutional maps. 
+Faster R-CNN \cite{ren2015faster} introduced an entire region proposal network (RPN) to speed region proposal.
+
+In the pursuit of yet more detection speed and simplicity, there is another group of detectors which 
+forgoes region proposal. The YOLO series of detectors begins with \cite{redmon2016yolo}, 
+a detector which uses a single convolutional network to directly perform class and bounding box predictions. 
+Incremental improvements  are introduced in \cite{redmon2017yolo9000,redmon2018yolov3}. 
+Since these methods do not require a separate classifier for each region, they are simpler and faster than 
+proposal-based methods.
+
+
+Since few-shot detection in not mainly concerned with speed, it borrows many techniques from 
+proposal-based approaches. Specifically, RoI layers and RPN networks will be used in the approach 
+explored in this paper (see Section \ref{two-stage-finetuning}).
+
+\subsection{Few-shot Detectors}
+Early work on few-shot learning used Bayesian inference as an attempt to generalize knowledge 
+learned from a pre-trained model \cite{fei2006one}. Currently, meta-learning approaches are the most popular.
+Particularly, a subclass called metric learning performs detection using a similarity metric. 
+Matching networks in \cite{VinyalsBLKW16} attempts to learn the similarity between the target image and 
+a small set of labeled images. This idea is extended by Prototypical Networks \cite{snell2017prototypical} 
+by using a linear classifier instead of nearest-neighbor for each class. 
+All the above are for the classification task. 
+
+For detection, \cite{kang2019few} defines a setting in which two kinds of training data are available: 
+\textit{base classes} and \textit{novel classes}. Base classes have abundant labeled samples, while 
+novel classes have only a limited number of samples. The job of the detector is to use knowledge 
+of base classes to  learn how to detect novel objects in a test setting that includes both base and novel classes. 
+This is motivated partly by the fact that large-scale object detection datasets (such as 
+PASCAL VOC and MSCOCO) only contain a limited number of object categories. However, these datasets can be 
+used in training as base classes to support the introduction of novel classes. 
+
+In meta-learning, a \textit{meta-leaner} is used to acquire class-level meta-knowledge and help the model 
+generalize to novel classes through various techniques such as feature re-weighting \cite{kang2019few}
+or class-specific feature generation \cite{wang2019meta}. The meta-learner trains on a small set of support 
+images with full annotations of target objects, and is often jointly trained with the detector using episodic
+training, in which each episode comprises of $N$ supporting objects a set of few query images \cite{VinyalsBLKW16}. 
+The training is also divided into two stages; in the first stage the model is only trained on 
+base classes, and in the second stage the model is fine-tuned on a support set of a few examples 
+of the novel classes  and a small subset of the base classes. 
+
+The approach explored herein adopts this two-stage training regime, but it gets rid of memory inefficiency 
+of episodic training. \cite{wang2020frustratingly}. Instead, the fine-tuning is only done 
+on the last layers of the network with a normal batch training scheme (See Section \ref{two-stage-finetuning}). 
+
 \section{Few-shot Finetuning}
 
 \subsection{Problem Definition}
@@ -151,6 +204,7 @@ the authors use $N$-way $K$-shot regime for evaluation, where $N$ is the number 
 and $K$ is the number of classes in the training set. 
 In this paper, the detector model is evaluated on a test set that includes base and novel classes
 to optimize the detection accuracy as measured by mean average precision (mAP) of both novel and base classes.
+
 
 \begin{figure}[h]
   % \centering
@@ -173,10 +227,10 @@ to optimize the detection accuracy as measured by mean average precision (mAP) o
   \label{finetuning}
 \end{figure}
 
-\subsection{Two-stage Finetuning}
+\subsection{Two-stage Finetuning} \label{two-stage-finetuning}
 In a two-stage process, we adopt the simple finetuning approach of \cite{wang2020frustratingly}. 
 This approach builds on Faster R-CNN \cite{ren2015faster}, a popular two-stage object detector model. 
-The approach is pictures in Figure \ref{finetuning}.  
+The approach is pictured in Figure \ref{finetuning}.  
 Figure \ref{stage-1-finetuning} shows that the Faster R-CNN model has three main components, namely, 
 the backbone, the Region Proposal Network (RPN), and the two-layer fully-connected network as a 
 Region of Interest (RoI) feature extractor.  
@@ -187,7 +241,8 @@ In addition to Faster R-CNN model, henceforth denoted $\mathcal{F}$, the approac
 classifier $\mathcal{C}$ for classifying objects into different classes and a box regressor $\mathcal{R}$
 to predict the bounding boxes. 
 
-The main intuitive assumption is that $\mathcal{F}$ is able to transfer the feature function $\mathcal{F}(x)$ learned from base classes to 
+The main intuitive assumption is that $\mathcal{F}$ is able to transfer the feature function 
+$\mathcal{F}(x)$ learned from base classes to 
 novel classes. In other words, $\mathcal{F}$ is class-agnostic. This leads to the main contribution of 
 \cite{wang2020frustratingly}: a suggestion that when introducing novel classes, it matters 
 little to retrain $\mathcal{F}$. Instead, only the the box classifier $\mathcal{C}$ and regressor $\mathcal{R}$
@@ -232,15 +287,14 @@ Cosine similarity is attractive because it offers feature normalization which re
 variance between classes and improves detection accuracy for novel classes \cite{wang2020frustratingly}. 
 
 We now propose a different similarity score, in which the Euclidean distance between the 
-input features and class weight vectors are passed through the Softmax function. Specifically
+input features and class weight vectors is passed through the Softmax function. Specifically
 \begin{equation}
   s_{ij} = \frac{e^{-\|\mathcal{F}(x)_i - w_j\|_2^2}}{\sum_{j} e^{-\|\mathcal{F}(x)_i - w_j\|_2^2}}.
 \end{equation}
-This similarity score provides a stronger kind of feature normalization which should help the model 
-adapt to novel classes when introducing novel classes. 
-
-
-\section{Other Sections}
+The Euclidean distance is one of the simplest distance metrics, and it has been shown in \cite{snell2017prototypical} 
+to outperform cosine similarity scores. 
+We extend this metric and find that this similarity score provides a stronger kind of feature normalization 
+which should help the model adapt well when introducing novel classes. 
 
 \section{Experimental Results}
 
