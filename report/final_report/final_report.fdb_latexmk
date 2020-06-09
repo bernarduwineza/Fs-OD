@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex final_report"] 1591320530 "final_report.aux" "final_report.bbl" "final_report" 1591331647
+["bibtex final_report"] 1591740618 "final_report.aux" "final_report.bbl" "final_report" 1591741063
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "References.bib" 1591299247 5038 48672f73427dd15b1679e4641924bcad ""
-  "final_report.aux" 1591320532 3453 97adf3e71105ca299bcff41e2ffbf194 "pdflatex"
+  "References.bib" 1591730666 7011 710915529a32af62f36768995c156e3e ""
+  "final_report.aux" 1591741063 4514 f098bcd056e39ba585878b7f645858f7 "pdflatex"
   (generated)
   "final_report.blg"
   "final_report.bbl"
-["pdflatex"] 1591320530 "final_report.tex" "final_report.pdf" "final_report" 1591331647
+["pdflatex"] 1591741061 "final_report.tex" "final_report.pdf" "final_report" 1591741063
   "../../figures/fs_det/s1_finetuning.png" 1590882343 303043 4f250de6c5222122f3eadce00be42d57 ""
   "../../figures/fs_det/s2_finetuning.png" 1590882381 306100 aaafe10250b6eccb42d96ed87271d03b ""
-  "../nips_style/neurips_2020.sty" 1587399310 11308 33fa6948195904410daa8773ea6feb42 ""
+  "../nips_style/neurips_2020.sty" 1591741058 11244 1dc7f3a0e0fdf17c7b1d0d21ff621a16 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -166,13 +166,13 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "final_report.aux" 1591320532 3453 97adf3e71105ca299bcff41e2ffbf194 "pdflatex"
-  "final_report.bbl" 1591320530 3762 2e118d47c709ee9a169507199eb7f2da "bibtex final_report"
-  "final_report.out" 1591320532 538 1b928f5e893d2e9e936fb0da8e9d91cd "pdflatex"
-  "final_report.tex" 1591320528 15251 6de670b6e44226cae99a8d926f8a56d4 ""
+  "final_report.aux" 1591741063 4514 f098bcd056e39ba585878b7f645858f7 "pdflatex"
+  "final_report.bbl" 1591740618 5531 42372fee19205e635b098391c4142369 "bibtex final_report"
+  "final_report.out" 1591741063 678 3af66e14f73545d4af423292d0d78a74 "pdflatex"
+  "final_report.tex" 1591740301 19521 559bf9ecf5221bcb031aab2d45fe499e ""
   "sym_def.tex" 1591244300 4337 e6b0dd1d0ec4bc258bb6acacdc60cac6 ""
   (generated)
-  "final_report.aux"
   "final_report.log"
-  "final_report.pdf"
   "final_report.out"
+  "final_report.aux"
+  "final_report.pdf"

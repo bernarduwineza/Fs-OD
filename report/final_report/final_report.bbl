@@ -59,19 +59,59 @@ A.~Geiger, P.~Lenz, C.~Stiller, and R.~Urtasun, ``{Vision meets Robotics}: {The
   KITTI Dataset},'' \emph{International Journal of Robotics Research (IJRR)},
   2013.
 
+\bibitem{girshick2014rich}
+R.~Girshick, J.~Donahue, T.~Darrell, and J.~Malik, ``Rich feature hierarchies
+  for accurate object detection and semantic segmentation,'' in
+  \emph{Proceedings of the IEEE conference on computer vision and pattern
+  recognition}, 2014, pp. 580--587.
+
+\bibitem{girshick2015fast}
+R.~Girshick, ``Fast {R-CNN},'' in \emph{Proceedings of the IEEE international
+  conference on computer vision}, 2015, pp. 1440--1448.
+
 \bibitem{ren2015faster}
 S.~Ren, K.~He, R.~Girshick, and J.~Sun, ``Faster r-cnn: Towards real-time
   object detection with region proposal networks,'' in \emph{Advances in neural
   information processing systems}, 2015, pp. 91--99.
 
+\bibitem{uijlings2013selective}
+J.~R. Uijlings, K.~E. Van De~Sande, T.~Gevers, and A.~W. Smeulders, ``Selective
+  search for object recognition,'' \emph{International journal of computer
+  vision}, vol. 104, no.~2, pp. 154--171, 2013.
+
+\bibitem{redmon2016yolo}
+J.~Redmon, S.~Divvala, R.~Girshick, and A.~Farhadi, ``You only look once:
+  Unified, real-time object detection,'' in \emph{Proceedings of the IEEE
+  conference on computer vision and pattern recognition}, 2016, pp. 779--788.
+
+\bibitem{redmon2017yolo9000}
+J.~Redmon and A.~Farhadi, ``Yolo9000: better, faster, stronger,'' in
+  \emph{Proceedings of the IEEE conference on computer vision and pattern
+  recognition}, 2017, pp. 7263--7271.
+
+\bibitem{redmon2018yolov3}
+------, ``Yolov3: An incremental improvement,'' \emph{arXiv preprint
+  arXiv:1804.02767}, 2018.
+
+\bibitem{fei2006one}
+L.~Fei-Fei, R.~Fergus, and P.~Perona, ``One-shot learning of object
+  categories,'' \emph{IEEE transactions on pattern analysis and machine
+  intelligence}, vol.~28, no.~4, pp. 594--611, 2006.
+
+\bibitem{kang2019few}
+B.~Kang, Z.~Liu, X.~Wang, F.~Yu, J.~Feng, and T.~Darrell, ``Few-shot object
+  detection via feature reweighting,'' in \emph{Proceedings of the IEEE
+  International Conference on Computer Vision}, 2019, pp. 8420--8429.
+
+\bibitem{wang2019meta}
+Y.-X. Wang, D.~Ramanan, and M.~Hebert, ``Meta-learning to detect rare
+  objects,'' in \emph{Proceedings of the IEEE International Conference on
+  Computer Vision}, 2019, pp. 9925--9934.
+
 \bibitem{he2016deep}
 K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   recognition,'' in \emph{Proceedings of the IEEE conference on computer vision
   and pattern recognition}, 2016, pp. 770--778.
-
-\bibitem{girshick2015fast}
-R.~Girshick, ``Fast {R-CNN},'' in \emph{Proceedings of the IEEE international
-  conference on computer vision}, 2015, pp. 1440--1448.
 
 \bibitem{chen2019closer}
 W.-Y. Chen, Y.-C. Liu, Z.~Kira, Y.-C.~F. Wang, and J.-B. Huang, ``A closer look
