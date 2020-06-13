@@ -88,8 +88,17 @@
 
 \begin{abstract} 
 
-Abstract goes here
-
+Despite the recent overwhelming success of deep convolutional neural networks in  
+object detection, they  still require large amounts of annotated examples per category  
+to perform well. Few-shot object detection aims to detect rare object categories that 
+often have only a few examples, and might not be present in training examples. 
+Most approaches have focused on meta-learning techniques such as feature re-weighting, 
+or feature re-generation. 
+This report explores a technique of finetuning only the last layer of the detection network. 
+It is shown that this  gives overwhelmingly better results despite being relatively simple. 
+The network was trained on base classes of PASCAL VOC, and COCO datasets containing general classes. 
+We additionally show that the model is able to generalize by evaluating it on novel 
+classes from the KITTI dataset. 
 \end{abstract}
 
 \subsection{Some rules for collaboration} % TO BE REMOVED BEFORE SUBMISSION 
@@ -106,7 +115,6 @@ Abstract goes here
 
 \section{Introduction}
 {\color{magenta}
-\textbf{This text is from the proposal. It will be changed.} \\
 Few-shot learning has received significant interest in the past few years, 
 but mainly for the tasks of classification and rarely for object detection. 
 In computer vision, the task of object detection is more challenging since the detector 
@@ -157,6 +165,21 @@ Since few-shot detection in not mainly concerned with speed, it borrows many tec
 proposal-based approaches. Specifically, RoI layers and RPN networks will be used in the approach 
 explored in this paper (see Section \ref{two-stage-finetuning}).
 
+\begin{figure}[]
+  \centering
+  \begin{minipage}{1\textwidth}
+  \centering
+  % \fbox{
+  \includegraphics[width=0.79\textwidth, height=0.27\textheight]{./../../figures/fs_det/fs-det.png}
+  % }
+  \end{minipage}
+\caption{A typical few-shot object detection process. Base classes contain abundant 
+training examples per object category, while novel class only have a few examples 
+per category. The few-shot detector must generalize well enough to detect novel objects 
+from only a few examples.}
+\label{fs-det}
+\end{figure}
+
 \subsection{Few-shot Detectors}
 Early work on few-shot learning used Bayesian inference as an attempt to generalize knowledge 
 learned from a pre-trained model \cite{fei2006one}. Currently, meta-learning approaches are the most popular.
@@ -167,7 +190,8 @@ by using a linear classifier instead of nearest-neighbor for each class.
 All the above are for the classification task. 
 
 For detection, \cite{kang2019few} defines a setting in which two kinds of training data are available: 
-\textit{base classes} and \textit{novel classes}. Base classes have abundant labeled samples, while 
+\textit{base classes} and \textit{novel classes}. This is shown in Figure \ref{fs-det}. 
+Base classes have abundant labeled samples, while 
 novel classes have only a limited number of samples. The job of the detector is to use knowledge 
 of base classes to  learn how to detect novel objects in a test setting that includes both base and novel classes. 
 This is motivated partly by the fact that large-scale object detection datasets (such as 
