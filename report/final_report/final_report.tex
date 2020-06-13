@@ -329,6 +329,37 @@ For the PASCAL VOC dataset, its 2007 and 2012 versions were used for training. T
 \subsection{Baseline}
 As discussed in section 3.3 we used a euclidean distance over softmax as the similarity index as compared to the cosine based similarity of Wang et. al. [3]. Therefore, we compare our results with that of [3]... Our approach is compared for 1, 5 and 10 shots on the PASCAL VOC and COCO dataset. Our implementation showed an improvement in 2 out of three K-shot settings. Further, we also tested our approach on the real-world dataset of traffic images, the KITTI dataset for 1, 5 and 10 shots.  
 
+\section{Results}
+\textbf{Results on PASCAL VOC:}\\
+We provide the mAP50 of the PASCAL VOC test data in Table 1 for the three K-shot settings. Overall we achieve comparable results with our similarity index compared to that of [3] and we achieve better performance in the 5-shot case. 
+\begin{table}[]
+\begin{tabular}{lllll}
+        & Our Approach & Wang et al. &  &  \\
+1 Shot  & 37.1         & 39.8        &  &  \\
+5 Shot  & 56.3         & 55.7        &  &  \\
+10 Shot & 52.6         & 56          &  & 
+\end{tabular}
+\end{table}
+\textbf{Results on COCO:}\\
+We provide the mAP50 of the COCO test set in Table 2 for the three K-shot settings. We were able to achieve better performance on the 5-shot and 10-shot cases.\\
+\begin{table}[]
+\begin{tabular}{lllll}
+        & Our Approach & Wang et al. &  &  \\
+1 Shot  & 36.3         & 39.8        &  &  \\
+5 Shot  & 47.3         & 45.2        &  &  \\
+10 Shot & 48.1         & 42.2        &  & 
+\end{tabular}
+\end{table}
+\textbf{Results on KITTI:}\\
+We provide the mAP50 of the KITTI test-set in Table 3 for the three K-shot settings. Since KITTI was not used by Wang et.al. [3] in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
+\begin{table}[]
+\begin{tabular}{lllll}
+        & Our Approach &  &  &  \\
+1 Shot  & 22.5         &  &  &  \\
+5 Shot  & 31.7         &  &  &  \\
+10 Shot & 29.8         &  &  & 
+\end{tabular}
+\end{table}
 
 \section{Conclusion}
 
