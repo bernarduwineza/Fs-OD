@@ -8,4 +8,7 @@
 \BOOKMARK [2][-]{subsection.3.2}{Two-stage Finetuning}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.3}{Euclidean Distance-based Similarity}{section.3}% 9
 \BOOKMARK [1][-]{section.4}{Experimental Results}{}% 10
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Experimental Setup}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Baseline}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Results}{}% 13
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 14
