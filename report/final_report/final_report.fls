@@ -290,15 +290,6 @@ INPUT ./../../final_results/Pascal/000148_5shot.png
 INPUT ./../../final_results/Pascal/000148_10shot.png
 INPUT ./../../final_results/Pascal/000148_10shot.png
 INPUT ./../../final_results/Pascal/000148_10shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png
-INPUT ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png
 INPUT ./../../figures/1shotpascal.png
 INPUT ./../../figures/1shotpascal.png
 INPUT ./../../figures/1shotpascal.png

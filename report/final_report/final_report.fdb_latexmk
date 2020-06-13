@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex final_report"] 1592081052 "final_report.aux" "final_report.bbl" "final_report" 1592081056
+["bibtex final_report"] 1592081694 "final_report.aux" "final_report.bbl" "final_report" 1592081792
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "References.bib" 1591730666 7011 710915529a32af62f36768995c156e3e ""
-  "final_report.aux" 1592081055 8080 736a055c58ab6ab59558f7a59a938614 "pdflatex"
+  "final_report.aux" 1592081792 8085 be6d62b2106c4c667bf9001cba7ce579 "pdflatex"
   (generated)
   "final_report.bbl"
   "final_report.blg"
-["pdflatex"] 1592081052 "final_report.tex" "final_report.pdf" "final_report" 1592081056
+["pdflatex"] 1592081789 "final_report.tex" "final_report.pdf" "final_report" 1592081792
   "../../figures/10shot.png" 1592077912 1463892 e449e08f9d7e8544b04fdbb920800041 ""
   "../../figures/10shotkitti.png" 1592077912 1447968 db687fbf38a43c6d5d910955ce8cfa32 ""
   "../../figures/10shotpascal.png" 1592077912 1076546 d36aca7add7130b47ced5c03584e9fe7 ""
@@ -19,9 +19,6 @@
   "../../figures/fs_det/fs-det.png" 1592021157 2677867 09e775f442d05a9c1c8104b3c3c8bafc ""
   "../../figures/fs_det/s1_finetuning.png" 1590882343 303043 4f250de6c5222122f3eadce00be42d57 ""
   "../../figures/fs_det/s2_finetuning.png" 1590882381 306100 aaafe10250b6eccb42d96ed87271d03b ""
-  "../../final_results//Coco/COCO_test2014_000000006499_10shot.png" 1590976292 721720 a8b641f78375985fc02ec4af214b3563 ""
-  "../../final_results//Coco/COCO_test2014_000000006499_1shot.png" 1590976290 721237 b8c12889c12217f238eb213e41bbb899 ""
-  "../../final_results//Coco/COCO_test2014_000000006499_5shot.png" 1590976290 720122 8c798f9e6f85b8ba08032f6172ad6a41 ""
   "../../final_results/Coco/COCO_test2014_000000006499_10shot.png" 1590976292 721720 a8b641f78375985fc02ec4af214b3563 ""
   "../../final_results/Coco/COCO_test2014_000000006499_1shot.png" 1590976290 721237 b8c12889c12217f238eb213e41bbb899 ""
   "../../final_results/Coco/COCO_test2014_000000006499_5shot.png" 1590976290 720122 8c798f9e6f85b8ba08032f6172ad6a41 ""
@@ -185,13 +182,16 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "final_report.aux" 1592081055 8080 736a055c58ab6ab59558f7a59a938614 "pdflatex"
-  "final_report.bbl" 1592081052 5531 42372fee19205e635b098391c4142369 "bibtex final_report"
-  "final_report.out" 1592081055 896 a7f1d3c9402a5d76ec982547d0f2ef6c "pdflatex"
-  "final_report.tex" 1592081048 29314 12b94ed300f3c9a9e8afbc63d4d50f88 ""
+  "Kitti_10shot.png" 0 -1 0 ""
+  "Kitti_1shot.png" 0 -1 0 ""
+  "Kitti_5shot.png" 0 -1 0 ""
+  "final_report.aux" 1592081792 8085 be6d62b2106c4c667bf9001cba7ce579 "pdflatex"
+  "final_report.bbl" 1592081694 5531 42372fee19205e635b098391c4142369 "bibtex final_report"
+  "final_report.out" 1592081792 896 a7f1d3c9402a5d76ec982547d0f2ef6c "pdflatex"
+  "final_report.tex" 1592081789 29170 c00d70abd4524c9028a3d50f846c6bef ""
   "sym_def.tex" 1591244300 4337 e6b0dd1d0ec4bc258bb6acacdc60cac6 ""
   (generated)
+  "final_report.log"
   "final_report.pdf"
   "final_report.out"
-  "final_report.log"
   "final_report.aux"

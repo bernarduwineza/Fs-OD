@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 JUN 2020 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 JUN 2020 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,15 +586,6 @@ LaTeX Warning: Label `finetuning' multiply defined.
 
 LaTeX Warning: Label `finetuning' multiply defined.
 
-
-LaTeX Warning: Label `finetuning' multiply defined.
-
-
-LaTeX Warning: Label `finetuning' multiply defined.
-
-
-LaTeX Warning: Label `finetuning' multiply defined.
-
 )
 \openout1 = `final_report.aux'.
 
@@ -882,46 +873,70 @@ n input line 439.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./../../final_results//Coco/COCO_test2014_000000006499_1shot.png, id=201, 642.
-4pt x 428.60126pt>
-File: ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png Graphic 
-file (type png)
-<use ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png>
-Package pdftex.def Info: ./../../final_results//Coco/COCO_test2014_000000006499
-_1shot.png  used on input line 452.
-(pdftex.def)             Requested size: 131.16353pt x 110.57042pt.
-<./../../final_results//Coco/COCO_test2014_000000006499_5shot.png, id=202, 642.
-4pt x 428.60126pt>
-File: ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png Graphic 
-file (type png)
-<use ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png>
-Package pdftex.def Info: ./../../final_results//Coco/COCO_test2014_000000006499
-_5shot.png  used on input line 459.
-(pdftex.def)             Requested size: 131.16353pt x 110.57042pt.
-<./../../final_results//Coco/COCO_test2014_000000006499_10shot.png, id=203, 642
-.4pt x 428.60126pt>
-File: ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png Graphic
- file (type png)
-<use ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png>
-Package pdftex.def Info: ./../../final_results//Coco/COCO_test2014_000000006499
-_10shot.png  used on input line 466.
-(pdftex.def)             Requested size: 123.21393pt x 110.57042pt.
+
+LaTeX Warning: File `Kitti_1shot.png' not found on input line 452.
+
+
+! Package pdftex.def Error: File `Kitti_1shot.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 ... height=0.17\textheight]{Kitti_1shot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Kitti_5shot.png' not found on input line 459.
+
+
+! Package pdftex.def Error: File `Kitti_5shot.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 ... height=0.17\textheight]{Kitti_5shot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Kitti_10shot.png' not found on input line 466.
+
+
+! Package pdftex.def Error: File `Kitti_10shot.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.466 ...height=0.17\textheight]{Kitti_10shot.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./../../figures/1shotpascal.png, id=204, 1003.75pt x 668.4975pt>
+<./../../figures/1shotpascal.png, id=201, 1003.75pt x 668.4975pt>
 File: ./../../figures/1shotpascal.png Graphic file (type png)
 <use ./../../figures/1shotpascal.png>
 Package pdftex.def Info: ./../../figures/1shotpascal.png  used on input line 47
 8.
 (pdftex.def)             Requested size: 186.8089pt x 110.56253pt.
-<./../../figures/5shotpascal.png, id=205, 1003.75pt x 669.50125pt>
+<./../../figures/5shotpascal.png, id=202, 1003.75pt x 669.50125pt>
 File: ./../../figures/5shotpascal.png Graphic file (type png)
 <use ./../../figures/5shotpascal.png>
 Package pdftex.def Info: ./../../figures/5shotpascal.png  used on input line 48
 4.
 (pdftex.def)             Requested size: 186.8089pt x 110.5651pt.
-<./../../figures/10shotpascal.png, id=206, 1002.74625pt x 667.49374pt>
+<./../../figures/10shotpascal.png, id=203, 1002.74625pt x 667.49374pt>
 File: ./../../figures/10shotpascal.png Graphic file (type png)
 <use ./../../figures/10shotpascal.png>
 Package pdftex.def Info: ./../../figures/10shotpascal.png  used on input line 4
@@ -933,19 +948,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 476--493
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./../../figures/1shot.png, id=207, 1003.75pt x 668.4975pt>
+<./../../figures/1shot.png, id=204, 1003.75pt x 668.4975pt>
 File: ./../../figures/1shot.png Graphic file (type png)
 <use ./../../figures/1shot.png>
 Package pdftex.def Info: ./../../figures/1shot.png  used on input line 502.
 (pdftex.def)             Requested size: 186.8089pt x 110.56253pt.
-<./../../figures/5shot.png, id=208, 1004.75375pt x 668.4975pt>
+<./../../figures/5shot.png, id=205, 1004.75375pt x 668.4975pt>
 File: ./../../figures/5shot.png Graphic file (type png)
 <use ./../../figures/5shot.png>
 Package pdftex.def Info: ./../../figures/5shot.png  used on input line 508.
 (pdftex.def)             Requested size: 186.81174pt x 110.56253pt.
-<./../../figures/10shot.png, id=209, 1002.74625pt x 668.4975pt>
+<./../../figures/10shot.png, id=206, 1002.74625pt x 668.4975pt>
 File: ./../../figures/10shot.png Graphic file (type png)
 <use ./../../figures/10shot.png>
 Package pdftex.def Info: ./../../figures/10shot.png  used on input line 514.
@@ -956,21 +971,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 500--517
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./../../figures/1shotkitti.png, id=210, 1004.75375pt x 668.4975pt>
+<./../../figures/1shotkitti.png, id=207, 1004.75375pt x 668.4975pt>
 File: ./../../figures/1shotkitti.png Graphic file (type png)
 <use ./../../figures/1shotkitti.png>
 Package pdftex.def Info: ./../../figures/1shotkitti.png  used on input line 525
 .
 (pdftex.def)             Requested size: 186.81174pt x 110.56253pt.
-<./../../figures/5shotkitti.png, id=211, 1003.75pt x 668.4975pt>
+<./../../figures/5shotkitti.png, id=208, 1003.75pt x 668.4975pt>
 File: ./../../figures/5shotkitti.png Graphic file (type png)
 <use ./../../figures/5shotkitti.png>
 Package pdftex.def Info: ./../../figures/5shotkitti.png  used on input line 531
 .
 (pdftex.def)             Requested size: 186.8089pt x 110.56253pt.
-<./../../figures/10shotkitti.png, id=212, 1004.75375pt x 667.49374pt>
+<./../../figures/10shotkitti.png, id=209, 1004.75375pt x 667.49374pt>
 File: ./../../figures/10shotkitti.png Graphic file (type png)
 <use ./../../figures/10shotkitti.png>
 Package pdftex.def Info: ./../../figures/10shotkitti.png  used on input line 53
@@ -982,7 +997,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 523--540
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./final_report.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -993,12 +1008,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ./../../final_results/Coco/COCO_test2014_000000006499_10shot.png (PNG copy)> <.
 /../../final_results/Pascal/000148_1shot.png (PNG copy)> <./../../final_results
 /Pascal/000148_5shot.png (PNG copy)> <./../../final_results/Pascal/000148_10sho
-t.png (PNG copy)> <./../../final_results//Coco/COCO_test2014_000000006499_1shot
-.png (PNG copy)> <./../../final_results//Coco/COCO_test2014_000000006499_5shot.
-png (PNG copy)> <./../../final_results//Coco/COCO_test2014_000000006499_10shot.
-png (PNG copy)>] [7 <./../../figures/1shotpascal.png> <./../../figures/5shotpas
-cal.png> <./../../figures/10shotpascal.png> <./../../figures/1shot.png> <./../.
-./figures/5shot.png> <./../../figures/10shot.png>])
+t.png (PNG copy)>] [7 <./../../figures/1shotpascal.png> <./../../figures/5shotp
+ascal.png> <./../../figures/10shotpascal.png> <./../../figures/1shot.png> <./..
+/../figures/5shot.png> <./../../figures/10shot.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 625.
  [8 <./../../figures/1shotkitti.png> <./../../figures/5shotkitti.png> <./../../
 figures/10shotkitti.png>]
@@ -1016,10 +1028,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 625.
  ) 
 Here is how much of TeX's memory you used:
- 12454 strings out of 492616
- 192929 string characters out of 6129482
- 330612 words of memory out of 5000000
- 15883 multiletter control sequences out of 15000+600000
+ 12447 strings out of 492616
+ 192137 string characters out of 6129482
+ 330813 words of memory out of 5000000
+ 15874 multiletter control sequences out of 15000+600000
  47611 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,13n,39p,1139b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1051,10 +1063,10 @@ ype1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
 e1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on final_report.pdf (8 pages, 22474360 bytes).
+Output written on final_report.pdf (8 pages, 20314796 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
+ 328 PDF objects out of 1000 (max. 8388607)
  264 compressed objects within 3 object streams
  60 named destinations out of 1000 (max. 500000)
- 23266 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 23251 words of extra memory for PDF output out of 24883 (max. 10000000)
 
