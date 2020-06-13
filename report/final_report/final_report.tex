@@ -330,21 +330,147 @@ For the PASCAL VOC dataset, its 2007 and 2012 versions were used for training. T
 As discussed in section 3.3 we used a euclidean distance over softmax as the similarity index as compared to the cosine based similarity of Wang et. al. \cite{wang2020frustratingly}. Therefore, we compare our results with that of \cite{wang2020frustratingly}... Our approach is compared for 1, 5 and 10 shots on the PASCAL VOC and COCO dataset. Our implementation showed an improvement in 2 out of three K-shot settings. Further, we also tested our approach on the real-world dataset of traffic images, the KITTI dataset for 1, 5 and 10 shots.  
 
 \section{Results}
-\textbf{Results on PASCAL VOC:}\\
+
+We provide the mAP50 of the PASCAL VOC test data in Table \ref{res_VOC} for the three K-shot settings. Overall we achieve comparable results with our similarity index compared to that of \cite{wang2020frustratingly} and we achieve better performance in the 5-shot case. 
+
 \begin{table}[h!]
-\begin{tabular}{|l|l|l|l} 
+\centering
+\begin{minipage}{0.35\textwidth}
+\begin{tabular}{|c|c|c|c} 
 \cline{1-3}
-        & Our Approach & Wang et al. &   \\ 
+        & \bf Ours & \bf Wang et al. &   \\ 
 \cline{1-3}
 1 Shot  & 37.1         & 39.8        &   \\ 
 \cline{1-3}
-5 Shot  & 56.3         & 55.7        &   \\ 
+5 Shot  & \bf56.3         & 55.7        &   \\ 
 \cline{1-3}
 10 Shot & 52.6         & 56          &   \\
 \cline{1-3}
 \end{tabular}
-\end{table}\\
-We provide the mAP50 of the PASCAL VOC test data in Table 1 for the three K-shot settings. Overall we achieve comparable results with our similarity index compared to that of \cite{wang2020frustratingly} and we achieve better performance in the 5-shot case. 
+\subcaption{PASCAL VOC}
+\label{res_VOC}
+\end{minipage}
+%
+\begin{minipage}{0.35\textwidth}
+\begin{tabular}{|c|c|c|c} 
+\cline{1-3}
+        & \bf Ours & \bf Wang et al. &   \\ 
+\cline{1-3}
+1 Shot  & 36.3         & 39.8        &   \\ 
+\cline{1-3}
+5 Shot  & \bf 47.3         & 45.2        &   \\ 
+\cline{1-3}
+10 Shot & \bf 48.1         & 42.2        &   \\
+\cline{1-3}
+\end{tabular}
+\subcaption{COCO}
+\label{res_COCO}
+\end{minipage}
+~~~~
+\begin{minipage}{0.2\textwidth}
+\begin{tabular}{|c|c|cc} 
+\cline{1-2}
+        & \bf Ours &  &   \\ 
+\cline{1-2}
+1 Shot  & 22.5         &  &   \\ 
+\cline{1-2}
+5 Shot  & 31.7         &  &   \\ 
+\cline{1-2}
+10 Shot & 29.8         &  &   \\
+\cline{1-2}
+\end{tabular}
+\subcaption{KITTI}
+\label{res_KITTI}
+\end{minipage}
+\caption{mAP50 on both PASCAL VOC and COCO datasets using our proposed approach and the one used 
+in \cite{wang2020frustratingly}. Instances when our approach is superior is in boldface. }
+\end{table} 
+
+We provide the mAP50 of the COCO test set in Table \ref{res_COCO} for the three K-shot settings. We were able to achieve better performance on the 5-shot and 10-shot cases.
+
+We provide the mAP50 of the KITTI test-set in Table \ref{res_KITTI} for the three K-shot settings. Since KITTI was not used in \cite{wang2020frustratingly} in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{0.33\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Coco/COCO_test2014_000000006499_1shot.png}
+  % }
+  \subcaption{1-shot}
+  \end{minipage}
+  %
+  \begin{minipage}{0.33\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Coco/COCO_test2014_000000006499_5shot.png}
+  % }
+  \subcaption{5-shot}
+  \end{minipage}
+  %
+  \begin{minipage}{0.31\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Coco/COCO_test2014_000000006499_10shot.png}
+  % }
+  \subcaption{10-shot}
+  \end{minipage}
+  \caption{Detection Results on COCO dataset. }
+  \label{finetuning}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{0.33\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/000148_1shot.png}
+  % }
+  \subcaption{1-shot}
+  \end{minipage}
+  %
+  \begin{minipage}{0.33\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/000148_5shot.png}
+  % }
+  \subcaption{5-shot}
+  \end{minipage}
+  %
+  \begin{minipage}{0.31\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/000148_10shot.png}
+  % }
+  \subcaption{10-shot}
+  \end{minipage}
+  \caption{Detection Results on PASCAL dataset. }
+  \label{finetuning}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{0.33\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results//Coco/COCO_test2014_000000006499_1shot.png}
+  % }
+  \subcaption{1-shot}
+  \end{minipage}
+  %
+  \begin{minipage}{0.33\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results//Coco/COCO_test2014_000000006499_5shot.png}
+  % }
+  \subcaption{5-shot}
+  \end{minipage}
+  %
+  \begin{minipage}{0.31\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results//Coco/COCO_test2014_000000006499_10shot.png}
+  % }
+  \subcaption{10-shot}
+  \end{minipage}
+  \caption{Detection Results on PASCAL dataset. }
+  \label{finetuning}
+\end{figure}
+
 \begin{figure}[h!]
   % \centering
   \begin{minipage}{0.47\textwidth}
@@ -368,21 +494,7 @@ We provide the mAP50 of the PASCAL VOC test data in Table 1 for the three K-shot
   \label{finetuning}
 \end{figure}
 
-\textbf{Results on COCO:}\\
-\begin{table}[h!]
-\begin{tabular}{|l|l|l|l} 
-\cline{1-3}
-        & Our Approach & Wang et al. &   \\ 
-\cline{1-3}
-1 Shot  & 36.3         & 39.8        &   \\ 
-\cline{1-3}
-5 Shot  & 47.3         & 45.2        &   \\ 
-\cline{1-3}
-10 Shot & 48.1         & 42.2        &   \\
-\cline{1-3}
-\end{tabular}
-\end{table}\\
-We provide the mAP50 of the COCO test set in Table 2 for the three K-shot settings. We were able to achieve better performance on the 5-shot and 10-shot cases.\\
+
 \begin{figure}[h!]
   % \centering
   \begin{minipage}{0.47\textwidth}
@@ -404,22 +516,8 @@ We provide the mAP50 of the COCO test set in Table 2 for the three K-shot settin
   \end{minipage}
   \caption{Our Results on the COCO Dataset }
   \label{finetuning}
-\end{figure}\\
-\textbf{Results on KITTI:}\\
-\begin{table}[h!]
-\begin{tabular}{|l|l|ll} 
-\cline{1-2}
-        & Our Approach &  &   \\ 
-\cline{1-2}
-1 Shot  & 22.5         &  &   \\ 
-\cline{1-2}
-5 Shot  & 31.7         &  &   \\ 
-\cline{1-2}
-10 Shot & 29.8         &  &   \\
-\cline{1-2}
-\end{tabular}
-\end{table}\\
-We provide the mAP50 of the KITTI test-set in Table 3 for the three K-shot settings. Since KITTI was not used by Wang et.al. \cite{wang2020frustratingly} in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
+\end{figure}
+
 \begin{figure}[h!]
   % \centering
   \begin{minipage}{0.47\textwidth}
@@ -440,7 +538,7 @@ We provide the mAP50 of the KITTI test-set in Table 3 for the three K-shot setti
   % }
   \end{minipage}
   \caption{Our Results on the KITTI Dataset }
-\end{figure}\\
+\end{figure}
 
 \section{Conclusion}
 
@@ -499,7 +597,8 @@ Bernard and Chetan will work on final report compilation.
 
 
 
-
+\appendix 
+\section{More Results}
 
 
 

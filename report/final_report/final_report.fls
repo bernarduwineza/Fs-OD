@@ -272,12 +272,42 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT ./../../figures/1shot pascal.png
-INPUT ./../../figures/1shot pascal.png
-INPUT ./../../figures/5shot pascal.png
-INPUT ./../../figures/5shot pascal.png
-INPUT ./../../figures/10shot pascal.png
-INPUT ./../../figures/10shot pascal.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_1shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_1shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_1shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_5shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_5shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_5shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_10shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_10shot.png
+INPUT ./../../final_results/Coco/COCO_test2014_000000006499_10shot.png
+INPUT ./../../final_results/Pascal/000148_1shot.png
+INPUT ./../../final_results/Pascal/000148_1shot.png
+INPUT ./../../final_results/Pascal/000148_1shot.png
+INPUT ./../../final_results/Pascal/000148_5shot.png
+INPUT ./../../final_results/Pascal/000148_5shot.png
+INPUT ./../../final_results/Pascal/000148_5shot.png
+INPUT ./../../final_results/Pascal/000148_10shot.png
+INPUT ./../../final_results/Pascal/000148_10shot.png
+INPUT ./../../final_results/Pascal/000148_10shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_1shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_5shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png
+INPUT ./../../final_results//Coco/COCO_test2014_000000006499_10shot.png
+INPUT ./../../figures/1shotpascal.png
+INPUT ./../../figures/1shotpascal.png
+INPUT ./../../figures/1shotpascal.png
+INPUT ./../../figures/5shotpascal.png
+INPUT ./../../figures/5shotpascal.png
+INPUT ./../../figures/5shotpascal.png
+INPUT ./../../figures/10shotpascal.png
+INPUT ./../../figures/10shotpascal.png
+INPUT ./../../figures/10shotpascal.png
 INPUT ./../../figures/1shot.png
 INPUT ./../../figures/1shot.png
 INPUT ./../../figures/1shot.png
@@ -287,12 +317,15 @@ INPUT ./../../figures/5shot.png
 INPUT ./../../figures/10shot.png
 INPUT ./../../figures/10shot.png
 INPUT ./../../figures/10shot.png
-INPUT ./../../figures/1shot kitti.png
-INPUT ./../../figures/1shot kitti.png
-INPUT ./../../figures/5shot kitti.png
-INPUT ./../../figures/5shot kitti.png
-INPUT ./../../figures/10shot kitti.png
-INPUT ./../../figures/10shot kitti.png
+INPUT ./../../figures/1shotkitti.png
+INPUT ./../../figures/1shotkitti.png
+INPUT ./../../figures/1shotkitti.png
+INPUT ./../../figures/5shotkitti.png
+INPUT ./../../figures/5shotkitti.png
+INPUT ./../../figures/5shotkitti.png
+INPUT ./../../figures/10shotkitti.png
+INPUT ./../../figures/10shotkitti.png
+INPUT ./../../figures/10shotkitti.png
 INPUT final_report.bbl
 INPUT final_report.bbl
 INPUT final_report.aux
