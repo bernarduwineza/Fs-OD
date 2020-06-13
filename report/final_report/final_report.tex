@@ -324,46 +324,45 @@ which should help the model adapt well when introducing novel classes.
 \subsection{Experimental Setup}
 The network architecture has been provided in section 3.2. All models were trained using SGD with a minibatch size of 16, the momentum of 0.9, and a weight decay of 0.0001. A learning rate of 0.02 is used during base training and 0.001 during few-shot fine-tuning. For base training, the model was trained for 20 epochs in total with early stopping for COCO and Pascal-VOC and then fined-tuned for the novel categories for 10 epochs. For KITTI, the PASCAL-VOC base feature detector was fixed and only the last layers we fine-tuned for 20 epochs.
 
-For the PASCAL VOC dataset, its 2007 and 2012 versions were used for training. Twenty of its classes were randomly divided into 15 base classes and 5 novel classes, where for each of the novel classes 1,  5 and 10 images were sampled from the validation set, corresponding to their specific class [3]. The PASCAL VOC 2007 test set is used for evaluation. For COCO, the 60 categories were used as base classes while the remaining 20 classes are used as novel classes with  K = 1, 5 and 10 (number of shots). For the KITTI dataset, we took 50 images and separated them into two classes of pedestrian and cars. For KITTI the feature extractor is not trained on any base classes but instead, we use the PASCAL VOC feature extractor and then fine-tune the detectors on 20 of the KITTI images and then test the model on the remaining 30. The final accuracy is measured by average precision (AP) of the novel classes, as well as, the base classes (for PASCAL and COCO)  and as the evaluation metric, we used AP50 where the matching threshold is 0.5 [3].
+For the PASCAL VOC dataset, its 2007 and 2012 versions were used for training. Twenty of its classes were randomly divided into 15 base classes and 5 novel classes, where for each of the novel classes 1,  5 and 10 images were sampled from the validation set, corresponding to their specific class \cite{wang2020frustratingly}. The PASCAL VOC 2007 test set is used for evaluation. For COCO, the 60 categories were used as base classes while the remaining 20 classes are used as novel classes with  K = 1, 5 and 10 (number of shots). For the KITTI dataset, we took 50 images and separated them into two classes of pedestrian and cars. For KITTI the feature extractor is not trained on any base classes but instead, we use the PASCAL VOC feature extractor and then fine-tune the detectors on 20 of the KITTI images and then test the model on the remaining 30. The final accuracy is measured by average precision (AP) of the novel classes, as well as, the base classes (for PASCAL and COCO)  and as the evaluation metric, we used AP50 where the matching threshold is 0.5 \cite{wang2020frustratingly}.
 
 \subsection{Baseline}
-As discussed in section 3.3 we used a euclidean distance over softmax as the similarity index as compared to the cosine based similarity of Wang et. al. [3]. Therefore, we compare our results with that of [3]... Our approach is compared for 1, 5 and 10 shots on the PASCAL VOC and COCO dataset. Our implementation showed an improvement in 2 out of three K-shot settings. Further, we also tested our approach on the real-world dataset of traffic images, the KITTI dataset for 1, 5 and 10 shots.  
+As discussed in section 3.3 we used a euclidean distance over softmax as the similarity index as compared to the cosine based similarity of Wang et. al. \cite{wang2020frustratingly}. Therefore, we compare our results with that of \cite{wang2020frustratingly}... Our approach is compared for 1, 5 and 10 shots on the PASCAL VOC and COCO dataset. Our implementation showed an improvement in 2 out of three K-shot settings. Further, we also tested our approach on the real-world dataset of traffic images, the KITTI dataset for 1, 5 and 10 shots.  
 
 \section{Results}
 \textbf{Results on PASCAL VOC:}\\
 \begin{table}[h!]
-\begin{tabular}{lllll}
-        & Our Approach & Wang et al. &  &  \\
-1 Shot  & 37.1         & 39.8        &  &  \\
-5 Shot  & 56.3         & 55.7        &  &  \\
-10 Shot & 52.6         & 56          &  & 
+\begin{tabular}{|l|l|l|l} 
+\cline{1-3}
+        & Our Approach & Wang et al. &   \\ 
+\cline{1-3}
+1 Shot  & 37.1         & 39.8        &   \\ 
+\cline{1-3}
+5 Shot  & 56.3         & 55.7        &   \\ 
+\cline{1-3}
+10 Shot & 52.6         & 56          &   \\
+\cline{1-3}
 \end{tabular}
 \end{table}\\
-We provide the mAP50 of the PASCAL VOC test data in Table 1 for the three K-shot settings. Overall we achieve comparable results with our similarity index compared to that of [3] and we achieve better performance in the 5-shot case. 
+We provide the mAP50 of the PASCAL VOC test data in Table 1 for the three K-shot settings. Overall we achieve comparable results with our similarity index compared to that of \cite{wang2020frustratingly} and we achieve better performance in the 5-shot case. 
 \begin{figure}[h!]
   % \centering
   \begin{minipage}{0.47\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shot pascal.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shotpascal.png}
   % }
-  \subcaption{1 Shot}
-  \label{1 Shot}
   \end{minipage}
   %
   \begin{minipage}{0.47\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shot pascal.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shotpascal.png}
   % }
-  \subcaption{5 Shot}
-  \label{5 Shot}
   \end{minipage}
   %
   \begin{minipage}{0.47\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shot pascal.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shotpascal.png}
   % }
-  \subcaption{10 Shot}
-  \label{10 Shot}
   \end{minipage}
   \caption{Our Results on the PASCAL Dataset }
   \label{finetuning}
@@ -371,11 +370,16 @@ We provide the mAP50 of the PASCAL VOC test data in Table 1 for the three K-shot
 
 \textbf{Results on COCO:}\\
 \begin{table}[h!]
-\begin{tabular}{lllll}
-        & Our Approach & Wang et al. &  &  \\
-1 Shot  & 36.3         & 39.8        &  &  \\
-5 Shot  & 47.3         & 45.2        &  &  \\
-10 Shot & 48.1         & 42.2        &  & 
+\begin{tabular}{|l|l|l|l} 
+\cline{1-3}
+        & Our Approach & Wang et al. &   \\ 
+\cline{1-3}
+1 Shot  & 36.3         & 39.8        &   \\ 
+\cline{1-3}
+5 Shot  & 47.3         & 45.2        &   \\ 
+\cline{1-3}
+10 Shot & 48.1         & 42.2        &   \\
+\cline{1-3}
 \end{tabular}
 \end{table}\\
 We provide the mAP50 of the COCO test set in Table 2 for the three K-shot settings. We were able to achieve better performance on the 5-shot and 10-shot cases.\\
@@ -385,65 +389,57 @@ We provide the mAP50 of the COCO test set in Table 2 for the three K-shot settin
   % \fbox{
   \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shot.png}
   % }
-  \subcaption{1 Shot}
-  \label{1 Shot}
   \end{minipage}
   %
   \begin{minipage}{0.47\textwidth}
   % \fbox{
   \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shot.png}
   % }
-  \subcaption{5 Shot}
-  \label{5 Shot}
   \end{minipage}
   %
   \begin{minipage}{0.47\textwidth}
   % \fbox{
   \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shot.png}
   % }
-  \subcaption{10 Shot}
-  \label{10 Shot}
   \end{minipage}
   \caption{Our Results on the COCO Dataset }
   \label{finetuning}
 \end{figure}\\
 \textbf{Results on KITTI:}\\
 \begin{table}[h!]
-\begin{tabular}{lllll}
-        & Our Approach &  &  &  \\
-1 Shot  & 22.5         &  &  &  \\
-5 Shot  & 31.7         &  &  &  \\
-10 Shot & 29.8         &  &  & 
+\begin{tabular}{|l|l|ll} 
+\cline{1-2}
+        & Our Approach &  &   \\ 
+\cline{1-2}
+1 Shot  & 22.5         &  &   \\ 
+\cline{1-2}
+5 Shot  & 31.7         &  &   \\ 
+\cline{1-2}
+10 Shot & 29.8         &  &   \\
+\cline{1-2}
 \end{tabular}
 \end{table}\\
-We provide the mAP50 of the KITTI test-set in Table 3 for the three K-shot settings. Since KITTI was not used by Wang et.al. [3] in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
+We provide the mAP50 of the KITTI test-set in Table 3 for the three K-shot settings. Since KITTI was not used by Wang et.al. \cite{wang2020frustratingly} in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
 \begin{figure}[h!]
   % \centering
   \begin{minipage}{0.47\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shot kitti.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shotkitti.png}
   % }
-  \subcaption{1 Shot}
-  \label{1 Shot}
   \end{minipage}
   %
   \begin{minipage}{0.47\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shot kitti.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shotkitti.png}
   % }
-  \subcaption{5 Shot}
-  \label{5 Shot}
   \end{minipage}
   %
   \begin{minipage}{0.47\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shot kitti.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shotkitti.png}
   % }
-  \subcaption{10 Shot}
-  \label{10 Shot}
   \end{minipage}
   \caption{Our Results on the KITTI Dataset }
-  \label{finetuning}
 \end{figure}\\
 
 \section{Conclusion}
