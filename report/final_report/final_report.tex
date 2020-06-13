@@ -321,6 +321,11 @@ We extend this metric and find that this similarity score provides a stronger ki
 which should help the model adapt well when introducing novel classes. 
 
 \section{Experimental Results}
+\subsection{Experimental Setup}
+The network architecture has been provided in section 3.2. All models were trained using SGD with a minibatch size of 16, the momentum of 0.9, and a weight decay of 0.0001. A learning rate of 0.02 is used during base training and 0.001 during few-shot fine-tuning. For base training, the model was trained for 20 epochs in total with early stopping for COCO and Pascal-VOC and then fined-tuned for the novel categories for 10 epochs. For KITTI, the PASCAL-VOC base feature detector was fixed and only the last layers we fine-tuned for 20 epochs.
+
+For the PASCAL VOC dataset, its 2007 and 2012 versions were used for training. Twenty of its classes were randomly divided into 15 base classes and 5 novel classes, where for each of the novel classes 1,  5 and 10 images were sampled from the validation set, corresponding to their specific class [3]. The PASCAL VOC 2007 test set is used for evaluation. For COCO, the 60 categories were used as base classes while the remaining 20 classes are used as novel classes with  K = 1, 5 and 10 (number of shots). For the KITTI dataset, we took 50 images and separated them into two classes of pedestrian and cars. For KITTI the feature extractor is not trained on any base classes but instead, we use the PASCAL VOC feature extractor and then fine-tune the detectors on 20 of the KITTI images and then test the model on the remaining 30. The final accuracy is measured by average precision (AP) of the novel classes, as well as, the base classes (for PASCAL and COCO)  and as the evaluation metric, we used AP50 where the matching threshold is 0.5 [3].
+
 
 \section{Conclusion}
 
