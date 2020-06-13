@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  12 JUN 2020 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 JUN 2020 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -579,7 +579,53 @@ Package: arydshln 2019/02/21 v1.76
 \adl@everyvbox=\toks38
 \adl@LTpagetotal=\dimen170
 ))
-(./final_report.aux)
+(./final_report.aux
+
+LaTeX Warning: Label `finetuning' multiply defined.
+
+
+LaTeX Warning: Label `1 Shot' multiply defined.
+
+
+LaTeX Warning: Label `sub@1 Shot' multiply defined.
+
+
+LaTeX Warning: Label `5 Shot' multiply defined.
+
+
+LaTeX Warning: Label `sub@5 Shot' multiply defined.
+
+
+LaTeX Warning: Label `10 Shot' multiply defined.
+
+
+LaTeX Warning: Label `sub@10 Shot' multiply defined.
+
+
+LaTeX Warning: Label `finetuning' multiply defined.
+
+
+LaTeX Warning: Label `1 Shot' multiply defined.
+
+
+LaTeX Warning: Label `sub@1 Shot' multiply defined.
+
+
+LaTeX Warning: Label `5 Shot' multiply defined.
+
+
+LaTeX Warning: Label `sub@5 Shot' multiply defined.
+
+
+LaTeX Warning: Label `10 Shot' multiply defined.
+
+
+LaTeX Warning: Label `sub@10 Shot' multiply defined.
+
+
+LaTeX Warning: Label `finetuning' multiply defined.
+
+)
 \openout1 = `final_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
@@ -597,8 +643,7 @@ LaTeX Font Info:    ... okay on input line 85.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
 LaTeX Font Info:    ... okay on input line 85.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 85.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -772,7 +817,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 168.
 
-<./../../figures/fs_det/fs-det.png, id=74, 1329.96875pt x 746.79pt>
+<./../../figures/fs_det/fs-det.png, id=86, 1329.96875pt x 746.79pt>
 File: ./../../figures/fs_det/fs-det.png Graphic file (type png)
 <use ./../../figures/fs_det/fs-det.png>
 Package pdftex.def Info: ./../../figures/fs_det/fs-det.png  used on input line 
@@ -782,13 +827,13 @@ Package pdftex.def Info: ./../../figures/fs_det/fs-det.png  used on input line
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <./../../figures/fs_det/fs-det.png>]
-<./../../figures/fs_det/s1_finetuning.png, id=107, 2228.325pt x 1008.76875pt>
+<./../../figures/fs_det/s1_finetuning.png, id=119, 2228.325pt x 1008.76875pt>
 File: ./../../figures/fs_det/s1_finetuning.png Graphic file (type png)
 <use ./../../figures/fs_det/s1_finetuning.png>
 Package pdftex.def Info: ./../../figures/fs_det/s1_finetuning.png  used on inpu
 t line 237.
 (pdftex.def)             Requested size: 186.804pt x 110.5647pt.
-<./../../figures/fs_det/s2_finetuning.png, id=108, 2112.89375pt x 1008.76875pt>
+<./../../figures/fs_det/s2_finetuning.png, id=120, 2112.89375pt x 1008.76875pt>
 
 File: ./../../figures/fs_det/s2_finetuning.png Graphic file (type png)
 <use ./../../figures/fs_det/s2_finetuning.png>
@@ -803,26 +848,179 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 1728) has occurred while \output is active []
 
  [3]
-(./final_report.bbl [4 <./../../figures/fs_det/s1_finetuning.png> <./../../figu
-res/fs_det/s2_finetuning.png>] [5])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+[4 <./../../figures/fs_det/s1_finetuning.png> <./../../figures/fs_det/s2_finetu
+ning.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 333--343
+
+ []
+
+
+LaTeX Warning: File `./../../figures/1shot pascal.png' not found on input line 
+348.
+
+<./../../figures/1shot pascal.png, id=180, 1003.75pt x 668.4975pt>
+File: ./../../figures/1shot pascal.png Graphic file (type png)
+<use ./../../figures/1shot pascal.png>
+Package pdftex.def Info: ./../../figures/1shot pascal.png  used on input line 3
+48.
+(pdftex.def)             Requested size: 186.8089pt x 110.56253pt.
+
+Overfull \hbox (43.53026pt too wide) in paragraph at lines 348--350
+[]\T1/ptm/m/n/10 (-20) pascal.png [] 
+ []
+
+
+LaTeX Warning: File `./../../figures/5shot pascal.png' not found on input line 
+356.
+
+<./../../figures/5shot pascal.png, id=181, 1003.75pt x 669.50125pt>
+File: ./../../figures/5shot pascal.png Graphic file (type png)
+<use ./../../figures/5shot pascal.png>
+Package pdftex.def Info: ./../../figures/5shot pascal.png  used on input line 3
+56.
+(pdftex.def)             Requested size: 186.8089pt x 110.5651pt.
+
+Overfull \hbox (43.53026pt too wide) in paragraph at lines 356--358
+[]\T1/ptm/m/n/10 (-20) pascal.png [] 
+ []
+
+
+LaTeX Warning: File `./../../figures/10shot pascal.png' not found on input line
+ 364.
+
+<./../../figures/10shot pascal.png, id=182, 1002.74625pt x 667.49374pt>
+File: ./../../figures/10shot pascal.png Graphic file (type png)
+<use ./../../figures/10shot pascal.png>
+Package pdftex.def Info: ./../../figures/10shot pascal.png  used on input line 
+364.
+(pdftex.def)             Requested size: 186.80571pt x 110.56967pt.
+
+Overfull \hbox (43.52707pt too wide) in paragraph at lines 364--366
+[]\T1/ptm/m/n/10 (-20) pascal.png [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--369
+[]$[]$ $[]$
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./../../figures/1shot.png, id=183, 1003.75pt x 668.4975pt>
+File: ./../../figures/1shot.png Graphic file (type png)
+<use ./../../figures/1shot.png>
+Package pdftex.def Info: ./../../figures/1shot.png  used on input line 387.
+(pdftex.def)             Requested size: 186.8089pt x 110.56253pt.
+<./../../figures/5shot.png, id=184, 1004.75375pt x 668.4975pt>
+File: ./../../figures/5shot.png Graphic file (type png)
+<use ./../../figures/5shot.png>
+Package pdftex.def Info: ./../../figures/5shot.png  used on input line 395.
+(pdftex.def)             Requested size: 186.81174pt x 110.56253pt.
+<./../../figures/10shot.png, id=185, 1002.74625pt x 668.4975pt>
+File: ./../../figures/10shot.png Graphic file (type png)
+<use ./../../figures/10shot.png>
+Package pdftex.def Info: ./../../figures/10shot.png  used on input line 403.
+(pdftex.def)             Requested size: 186.80571pt x 110.56253pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--408
+[]$[]$ $[]$
+ []
+
+
+LaTeX Warning: File `./../../figures/1shot kitti.png' not found on input line 4
+25.
+
+<./../../figures/1shot kitti.png, id=186, 1004.75375pt x 668.4975pt>
+File: ./../../figures/1shot kitti.png Graphic file (type png)
+<use ./../../figures/1shot kitti.png>
+Package pdftex.def Info: ./../../figures/1shot kitti.png  used on input line 42
+5.
+(pdftex.def)             Requested size: 186.81174pt x 110.56253pt.
+
+Overfull \hbox (34.84047pt too wide) in paragraph at lines 425--427
+[]\T1/ptm/m/n/10 (-20) kitti.png [] 
+ []
+
+
+LaTeX Warning: File `./../../figures/5shot kitti.png' not found on input line 4
+33.
+
+<./../../figures/5shot kitti.png, id=187, 1003.75pt x 668.4975pt>
+File: ./../../figures/5shot kitti.png Graphic file (type png)
+<use ./../../figures/5shot kitti.png>
+Package pdftex.def Info: ./../../figures/5shot kitti.png  used on input line 43
+3.
+(pdftex.def)             Requested size: 186.8089pt x 110.56253pt.
+
+Overfull \hbox (34.83763pt too wide) in paragraph at lines 433--435
+[]\T1/ptm/m/n/10 (-20) kitti.png [] 
+ []
+
+
+LaTeX Warning: File `./../../figures/10shot kitti.png' not found on input line 
+441.
+
+<./../../figures/10shot kitti.png, id=188, 1004.75375pt x 667.49374pt>
+File: ./../../figures/10shot kitti.png Graphic file (type png)
+<use ./../../figures/10shot kitti.png>
+Package pdftex.def Info: ./../../figures/10shot kitti.png  used on input line 4
+41.
+(pdftex.def)             Requested size: 186.81174pt x 110.56967pt.
+
+Overfull \hbox (34.84047pt too wide) in paragraph at lines 441--443
+[]\T1/ptm/m/n/10 (-20) kitti.png [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--446
+[]$[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--449
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./final_report.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./../../figures/1shot pascal.png> <./../../figures/5shot pascal.png> <./..
+/../figures/10shot pascal.png> <./../../figures/1shot.png> <./../../figures/5sh
+ot.png> <./../../figures/10shot.png>] [7 <./../../figures/1shot kitti.png> <./.
+./../figures/5shot kitti.png> <./../../figures/10shot kitti.png>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 531.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 531.
  (./final_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 531.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 531.
 Package rerunfilecheck Info: File `final_report.out' has not changed.
-(rerunfilecheck)             Checksum: 3AF66E14F73545D4AF423292D0D78A74;678.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+(rerunfilecheck)             Checksum: 9CD88098B66446BA9DE1B21CC3567C2D;847.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 531.
  ) 
 Here is how much of TeX's memory you used:
- 12337 strings out of 492616
- 188731 string characters out of 6129482
- 322388 words of memory out of 5000000
- 15798 multiletter control sequences out of 15000+600000
- 47611 words of font info for 172 fonts, out of 8000000 for 9000
+ 12401 strings out of 492616
+ 190330 string characters out of 6129482
+ 325619 words of memory out of 5000000
+ 15844 multiletter control sequences out of 15000+600000
+ 47741 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,9n,39p,963b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,39p,1065b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -851,10 +1049,10 @@ ype1/public/cm-super/sftt1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
 e1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on final_report.pdf (6 pages, 3501611 bytes).
+Output written on final_report.pdf (8 pages, 17141877 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 23144 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 249 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 23213 words of extra memory for PDF output out of 24883 (max. 10000000)
 
