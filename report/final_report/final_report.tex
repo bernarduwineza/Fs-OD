@@ -123,11 +123,8 @@ In this project we aim to explore fine-tuning approaches while contrasting them 
 We aim to experiment on benchmark datasets such as 
 COCO \cite{LinMBHPRDZ14} and PASCAL \cite{Everingham10} and also extend these approaches 
 towards object detection with the KITTI dataset \cite{Geiger2013IJRR}.
-
-In addition, we plan on examining how many shots are necessary to reach comparable accuracy relative to 
-conventional detection approaches. To this end, we will attempt to develop a metric that assesses
-the model's knowledge, and requests additional labeled examples if it has not reached a certain accuracy. 
-This will allow us to further compare the performance of the two approaches. 
+Additionally, we examine how many shots are necessary to reach comparable accuracy relative to 
+conventional detection approaches.
 } 
 
 \section{Existing Approaches}
@@ -379,21 +376,21 @@ We provide the mAP50 of the KITTI test-set in Table \ref{tab:table1} for the thr
   \centering
   \begin{minipage}{0.33\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/000148_1shot.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/Pascal_1.png}
   % }
   \subcaption{1-shot}
   \end{minipage}
   %
   \begin{minipage}{0.33\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/000148_5shot.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/Pascal_5.png}
   % }
   \subcaption{5-shot}
   \end{minipage}
   %
   \begin{minipage}{0.31\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/000148_10shot.png}
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../final_results/Pascal/Pascal_10.png}
   % }
   \subcaption{10-shot}
   \end{minipage}
@@ -484,7 +481,6 @@ Bernard and Chetan will work on final report compilation.
 \fi 
 
 \bibliographystyle{IEEEtran}
-\clearpage 
 \bibliography{References}
 
 \clearpage
@@ -514,7 +510,7 @@ Bernard and Chetan will work on final report compilation.
   % }
   \subcaption{}
   \end{minipage}
-  \caption{Our Results on the PASCAL Dataset. (a) 1-shot (b)5-shot (c)10-shot  }
+  \caption{Our Results on the PASCAL Dataset. (a) 1-shot (b) 5-shot (c) 10-shot  }
   \label{finetuning}
 \end{figure}
 
@@ -541,7 +537,7 @@ Bernard and Chetan will work on final report compilation.
   % }
   \subcaption{}
   \end{minipage}
-  \caption{Our Results on the COCO Dataset.(a) 1-shot (b)5-shot (c)10-shot }
+  \caption{Our Results on the COCO Dataset. (a) 1-shot (b) 5-shot (c) 10-shot }
   \label{finetuning}
 \end{figure}
 
@@ -567,7 +563,7 @@ Bernard and Chetan will work on final report compilation.
   % }
   \subcaption{}
   \end{minipage}
-  \caption{Our Results on the KITTI Dataset. (a) 1-shot (b)5-shot (c)10-shot }
+  \caption{Our Results on the KITTI Dataset. (a) 1-shot (b) 5-shot (c) 10-shot }
 \end{figure}
 
 
