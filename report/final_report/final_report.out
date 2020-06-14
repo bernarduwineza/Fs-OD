@@ -1,15 +1,14 @@
-\BOOKMARK [2][-]{subsection.0.1}{Some rules for collaboration}{}% 1
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 2
-\BOOKMARK [1][-]{section.2}{Existing Approaches}{}% 3
-\BOOKMARK [2][-]{subsection.2.1}{General Detectors}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.2}{Few-shot Detectors}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Few-shot Finetuning}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Problem Definition}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Two-stage Finetuning}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.3}{Euclidean Distance-based Similarity}{section.3}% 9
-\BOOKMARK [1][-]{section.4}{Experimental Results}{}% 10
-\BOOKMARK [2][-]{subsection.4.1}{Experimental Setup}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.2}{Baseline}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{Results}{}% 13
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 14
-\BOOKMARK [1][-]{appendix.A}{More Results}{}% 15
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Existing Approaches}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{General Detectors}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Few-shot Detectors}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Few-shot Finetuning}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Problem Definition}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Two-stage Finetuning}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Euclidean Distance-based Similarity}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Experimental Results}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Experimental Setup}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Baseline}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Results}{}% 12
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 13
+\BOOKMARK [1][-]{appendix.A}{More Results}{}% 14

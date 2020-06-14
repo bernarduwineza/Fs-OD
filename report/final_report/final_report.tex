@@ -101,40 +101,28 @@ We additionally show that the model is able to generalize by evaluating it on no
 classes from the KITTI dataset. 
 \end{abstract}
 
-\subsection{Some rules for collaboration} % TO BE REMOVED BEFORE SUBMISSION 
-
-\begin{itemize}
-  \item DO NOT delete text you did not write, unless the person who wrote it asks you. 
-  If you have issues with some of the text, discuss with the author first. 
- 
-  \item Commit and push to GitHub often. This helps others staying updated. 
-
-  \item Apply other common sense rules of collaboration.
-
-\end{itemize}
-
 \section{Introduction}
-{\color{magenta}
-Few-shot learning has received significant interest in the past few years, 
+{\color{black}
+Few-shot learning has received significant interest in the past few years in computer vision, 
 but mainly for the tasks of classification and rarely for object detection. 
-In computer vision, the task of object detection is more challenging since the detector 
+The task of object detection is inherently more challenging since the detector 
 not only has to perform recognition of the different kinds of objects present,
 it also has to localize them. This is already a challenging task that relies heavily 
-on the availability of massive amounts of labeled training data. Now when a new data-point 
+on the availability of massive amounts of labeled training data. When a new data-point 
 is obtained belonging to a novel category, adapting the model becomes a very difficult 
 task especially when the new category contains a few samples. Recently, meta learning techniques 
 have been proposed for adapting deep models to novel categories. However, they are not easily 
-extendable to the task of object detection. Take for example the Matching \cite{VinyalsBLKW16} 
+extendable to the task of object detection. Matching Networks \cite{VinyalsBLKW16} 
 and Prototypical Networks \cite{snell2017prototypical}, building prototypes of objects is 
 much more difficult than building prototype of the categories. Another approach that is being 
 explored by researchers is to provide ways to fine-tune the detection layers of 
 deep models to adapt to the new categories \cite{wang2020frustratingly}.
 
 
-In this project we aim to do a comparative study of meta-learning and fine-tuning approaches 
-towards object detection. We aim to experiment on benchmark datasets such as 
+In this project we aim to explore fine-tuning approaches while contrasting them with meta-learning techniques. 
+We aim to experiment on benchmark datasets such as 
 COCO \cite{LinMBHPRDZ14} and PASCAL \cite{Everingham10} and also extend these approaches 
-towards 3D object detection with the KITTI dataset \cite{Geiger2013IJRR}.
+towards object detection with the KITTI dataset \cite{Geiger2013IJRR}.
 
 In addition, we plan on examining how many shots are necessary to reach comparable accuracy relative to 
 conventional detection approaches. To this end, we will attempt to develop a metric that assesses
@@ -331,64 +319,33 @@ As discussed in section 3.3 we used a euclidean distance over softmax as the sim
 
 \section{Results}
 
-We provide the mAP50 of the PASCAL VOC test data in Table \ref{res_VOC} for the three K-shot settings. Overall we achieve comparable results with our similarity index compared to that of \cite{wang2020frustratingly} and we achieve better performance in the 5-shot case. 
+The mean average precision (mAP) is used to evaluate the results of the detectors. It gives a number between 0 and 100 (the higher the better) and is different compared to the accuracy metric in classification. Each of the bounding boxes in a output image has a score associated with it(likelihood of the box containing an object). For each of these predictions the area under the Precision-recall Curve is obtained which i known as Average Precision (AP). By averaging the AP values over all the classes in the image gives us mAP. A detection is a true positive if it has an ‘intersection over union’ (IoU or overlap) with the ground-truth box greater than some threshold. In our case we used a threshold of 0.5 and hence we also called it mAP50. The IoU is defined as follows,
+\begin{equation}
+    IoU = \frac{ground \  truth \cap prediction}{ground \  truth  \cup prediction}
+\end{equation}
 
+We provide the mAP50 results on all the datasets used in table \ref{tab:table1}. Since KITTI was not used by Wang et.al. \cite{wang2020frustratingly} we do not add their results and only report ours. \par
 \begin{table}[h!]
 \centering
-\begin{minipage}{0.35\textwidth}
-\begin{tabular}{|c|c|c|c} 
-\cline{1-3}
-        & \bf Ours & \bf Wang et al. &   \\ 
-\cline{1-3}
-1 Shot  & 37.1         & 39.8        &   \\ 
-\cline{1-3}
-5 Shot  & \bf56.3         & 55.7        &   \\ 
-\cline{1-3}
-10 Shot & 52.6         & 56          &   \\
-\cline{1-3}
+\small
+\begin{tabular}{lccccc}
+\hline
+ & \multicolumn{2}{c}{\textbf{COCO}} & \multicolumn{2}{c}{\textbf{PASCAL}} & \textbf{KITTI} \\ \hline
+ & Ours & \begin{tabular}[c]{@{}c@{}}Wang \\ et. al.\end{tabular} & Ours & \begin{tabular}[c]{@{}c@{}}Wang \\ et. al.\end{tabular} & Ours \\ \hline
+\textbf{1-shot} & 37.1 & 39.8 & 36.3 & 39.8 & 22.5 \\
+\textbf{5-shot} & \textbf{56.3} & 55.7 & \textbf{47.3} & 45.2 & 31.7 \\
+\textbf{10-shot} & 54.9 & 56 & \textbf{48.1} & 42.2 & 29.8 \\ \hline
 \end{tabular}
-\subcaption{PASCAL VOC}
-\label{res_VOC}
-\end{minipage}
-%
-\begin{minipage}{0.35\textwidth}
-\begin{tabular}{|c|c|c|c} 
-\cline{1-3}
-        & \bf Ours & \bf Wang et al. &   \\ 
-\cline{1-3}
-1 Shot  & 36.3         & 39.8        &   \\ 
-\cline{1-3}
-5 Shot  & \bf 47.3         & 45.2        &   \\ 
-\cline{1-3}
-10 Shot & \bf 48.1         & 42.2        &   \\
-\cline{1-3}
-\end{tabular}
-\subcaption{COCO}
-\label{res_COCO}
-\end{minipage}
-~~~~
-\begin{minipage}{0.2\textwidth}
-\begin{tabular}{|c|c|cc} 
-\cline{1-2}
-        & \bf Ours &  &   \\ 
-\cline{1-2}
-1 Shot  & 22.5         &  &   \\ 
-\cline{1-2}
-5 Shot  & 31.7         &  &   \\ 
-\cline{1-2}
-10 Shot & 29.8         &  &   \\
-\cline{1-2}
-\end{tabular}
-\subcaption{KITTI}
-\label{res_KITTI}
-\end{minipage}
-\caption{mAP50 on both PASCAL VOC and COCO datasets using our proposed approach and the one used 
-in \cite{wang2020frustratingly}. Instances when our approach is superior is in boldface. }
-\end{table} 
+\caption{mAP50 results on PASCAL, COCO and KITTI test sets. Instances where our approach is better is shown in bold.}
+\label{tab:table1}
+\end{table}
+In general increasing the number of shots (i.e. data samples for the novel classes) helps in improving the detection results. This can be observed from figures \ref{coco_results}, \ref{pascal_results}, \ref{kitti_plots}. In case of COCO we observed that the detector was producing a lot of bounding boxes with greater than 50\% prediction scores.\par
+In general using the detector of \cite{wang2020frustratingly} with our similarity index gives comparable results to their cosine distance based similarity. As observed in table \ref{tab:table1} our similarity index tends to give better performance for the cases when more than one shot of novel (class) training data was used. More results can be found in Appendix \ref{App}.
 
-We provide the mAP50 of the COCO test set in Table \ref{res_COCO} for the three K-shot settings. We were able to achieve better performance on the 5-shot and 10-shot cases.
 
-We provide the mAP50 of the KITTI test-set in Table \ref{res_KITTI} for the three K-shot settings. Since KITTI was not used in \cite{wang2020frustratingly} in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
+We provide the mAP50 of the COCO test set in Table \ref{tab:table1} for the three K-shot settings. We were able to achieve better performance on the 5-shot and 10-shot cases.
+
+We provide the mAP50 of the KITTI test-set in Table \ref{tab:table1} for the three K-shot settings. Since KITTI was not used in \cite{wang2020frustratingly} in their experiments, we are not reporting the results the detector would have achieved with a cosine similarity based classifier and we just report the mAP50 of our approach. 
 
 
 \begin{figure}[h!]
@@ -449,21 +406,21 @@ We provide the mAP50 of the KITTI test-set in Table \ref{res_KITTI} for the thre
   \centering
   \begin{minipage}{0.33\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{Kitti_1shot.png}
+  \includegraphics[trim={3cm 0cm 0cm 0cm}, clip, height=0.17\textheight]{./../../final_results/Kitti/000128_1shot.png}
   % }
   \subcaption{1-shot}
   \end{minipage}
   %
   \begin{minipage}{0.33\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{Kitti_5shot.png}
+  \includegraphics[trim={3cm 0cm 0cm 0cm}, clip, height=0.17\textheight]{./../../final_results/Kitti/000128_5shot.png}
   % }
   \subcaption{5-shot}
   \end{minipage}
   %
   \begin{minipage}{0.31\textwidth}
   % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{Kitti_10shot.png}
+  \includegraphics[height=0.17\textheight, trim={3cm 0cm 0cm 0cm}, clip]{./../../final_results/Kitti/000128_10shot.png}
   % }
   \subcaption{10-shot}
   \end{minipage}
@@ -471,77 +428,8 @@ We provide the mAP50 of the KITTI test-set in Table \ref{res_KITTI} for the thre
   \label{kitti_plots}
 \end{figure}
 
-\begin{figure}[h]
-  % \centering
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shotpascal.png}
-  % }
-  \end{minipage}
-  %
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shotpascal.png}
-  % }
-  \end{minipage}
-  %
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shotpascal.png}
-  % }
-  \end{minipage}
-  \caption{Our Results on the PASCAL Dataset }
-  \label{finetuning}
-\end{figure}
-
-
-\begin{figure}[h]
-  % \centering
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shot.png}
-  % }
-  \end{minipage}
-  %
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shot.png}
-  % }
-  \end{minipage}
-  %
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shot.png}
-  % }
-  \end{minipage}
-  \caption{Our Results on the COCO Dataset }
-  \label{finetuning}
-\end{figure}
-
-\begin{figure}[h]
-  % \centering
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shotkitti.png}
-  % }
-  \end{minipage}
-  %
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shotkitti.png}
-  % }
-  \end{minipage}
-  %
-  \begin{minipage}{0.47\textwidth}
-  % \fbox{
-  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shotkitti.png}
-  % }
-  \end{minipage}
-  \caption{Our Results on the KITTI Dataset }
-\end{figure}
-
 \section{Conclusion}
-
+In this project we analysed the state of the art few shot object detection technique of Wang et. al. \cite{wang2020frustratingly}. Instead of using the cosine distance based similarity of \cite{wang2020frustratingly} for obtaining the object wise classification score, we used Euclidean distance over softmax to obtain the classification score. We also showed the application of this few-shot object detection approach for detecting cars and pedestrians from traffic images (KITTI). As observed from our results in table \ref{tab:table1} our similarity index not only gives comparable performance to that of \cite{wang2020frustratingly} but also outperforms it many cases. Our experiments show that fine tuning based few-shot object detection techniques can also be used on traffic images where obtaining manually annotated data is challenging. Extension of these techniques for 3D object detection can also be explored where using Lidar based depth maps can help provide more context for the model to better segment the objects in an image.
 
 
 \if{ %This is to remove the proposal from output
@@ -595,31 +483,98 @@ Bernard and Chetan will work on final report compilation.
 }
 \fi 
 
-
-
-\appendix 
-\section{More Results}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \bibliographystyle{IEEEtran}
+\clearpage 
 \bibliography{References}
+
+\clearpage
+\appendix
+
+\section{More Results}\label{App}
+
+\begin{figure}[h]
+  % \centering
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shotpascal.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shotpascal.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shotpascal.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  \caption{Our Results on the PASCAL Dataset. (a) 1-shot (b)5-shot (c)10-shot  }
+  \label{finetuning}
+\end{figure}
+
+
+\begin{figure}[h]
+  % \centering
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shot.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shot.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shot.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  \caption{Our Results on the COCO Dataset.(a) 1-shot (b)5-shot (c)10-shot }
+  \label{finetuning}
+\end{figure}
+
+\begin{figure}[h]
+  % \centering
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/1shotkitti.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/5shotkitti.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  %
+  \begin{minipage}{0.47\textwidth}
+  % \fbox{
+  \includegraphics[width=\textwidth, height=0.17\textheight]{./../../figures/10shotkitti.png}
+  % }
+  \subcaption{}
+  \end{minipage}
+  \caption{Our Results on the KITTI Dataset. (a) 1-shot (b)5-shot (c)10-shot }
+\end{figure}
+
+
+
+
+
+
 
 
 \end{document}
